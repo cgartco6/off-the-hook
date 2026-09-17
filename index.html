@@ -1,0 +1,1992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Off the Hook — Fresh & Frozen Fish</title>
+<meta name="description" content="Off the Hook — fresh and frozen fish, free range eggs and chicken. Cold chain from our door to yours.">
+<style>
+/* ============================ BASE ============================ */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--sand);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;
+}
+:root{
+  --deep:#05202e;--ocean:#0a3a52;--teal:#12a3a3;--aqua:#5fd6cf;--coral:#ff6a45;
+  --sand:#f2f7f8;--ink:#0c1a22;--muted:#6d8a97;--line:#e0e9ec;--white:#fff;
+  --ok:#1f9d6b;--warn:#d9932a;--danger:#dd5252;--r:16px;
+  --sh:0 10px 30px rgba(6,32,46,.08);--sh2:0 22px 55px rgba(6,32,46,.16);
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.2;letter-spacing:-.02em}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 16px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.center{text-align:center}
+.hide{display:none!important}
+
+/* ============================ BUTTONS ============================ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;
+  border-radius:999px;font-weight:650;font-size:14px;transition:.18s;white-space:nowrap;border:1px solid transparent}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--coral);color:#fff;box-shadow:0 8px 20px rgba(255,106,69,.32)}
+.btn-primary:hover{box-shadow:0 12px 28px rgba(255,106,69,.42);transform:translateY(-1px)}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 8px 20px rgba(18,163,163,.28)}
+.btn-teal:hover{transform:translateY(-1px)}
+.btn-ghost{border-color:rgba(255,255,255,.28);color:#eaf6f8}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-outline{border-color:var(--line);background:#fff;color:var(--ink)}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal)}
+.btn-dark{background:var(--deep);color:#fff}
+.btn-sm{padding:8px 14px;font-size:13px}
+.btn-lg{padding:15px 28px;font-size:16px}
+.btn[disabled]{opacity:.45;pointer-events:none}
+
+/* ============================ HEADER ============================ */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(5,32,46,.97);backdrop-filter:blur(12px);
+  color:#eaf6f8;border-bottom:1px solid rgba(255,255,255,.09)}
+.hdr-in{display:flex;align-items:center;gap:16px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.03em;font-size:19px}
+.brand span i{color:var(--aqua);font-style:normal}
+.nav{display:flex;gap:4px;margin-left:14px}
+.nav a{padding:9px 14px;border-radius:999px;font-size:14px;font-weight:550;color:#c8dfe5;transition:.15s}
+.nav a:hover{background:rgba(255,255,255,.09);color:#fff}
+.nav a.on{background:rgba(95,214,207,.16);color:var(--aqua)}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:8px}
+.icon-btn{position:relative;display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:999px;
+  font-size:14px;font-weight:600;color:#dceef2;border:1px solid rgba(255,255,255,.16);transition:.15s}
+.icon-btn:hover{background:rgba(255,255,255,.1)}
+.badge{position:absolute;top:-4px;right:-4px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;
+  background:var(--coral);color:#fff;font-size:11px;font-weight:800;display:grid;place-items:center}
+.burger{display:none;padding:9px 11px;border-radius:12px;border:1px solid rgba(255,255,255,.18)}
+.mnav{display:none;border-top:1px solid rgba(255,255,255,.09);padding:10px 0 16px}
+.mnav a{display:block;padding:12px 16px;border-radius:12px;font-weight:600;color:#d5e9ee}
+.mnav a:hover{background:rgba(255,255,255,.08)}
+@media(max-width:920px){
+  .nav{display:none}
+  .burger{display:inline-flex}
+  .hdr.open .mnav{display:block}
+  .hdr-right .lbl{display:none}
+}
+
+/* ============================ HERO ============================ */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(1200px 600px at 15% -10%,rgba(18,163,163,.55),transparent 60%),
+  radial-gradient(900px 500px at 95% 10%,rgba(255,106,69,.28),transparent 60%),
+  linear-gradient(160deg,#05202e,#0a3a52 60%,#062a3b);
+  color:#fff}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:70px 0 76px}
+.hero h1{font-size:clamp(32px,5vw,54px);font-weight:830;letter-spacing:-.035em}
+.hero h1 em{font-style:normal;color:var(--aqua)}
+.hero p.lead{margin-top:16px;font-size:17px;color:#bcd8e0;max-width:520px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-img{border-radius:26px;overflow:hidden;box-shadow:var(--sh2);border:1px solid rgba(255,255,255,.14)}
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;padding-top:24px;border-top:1px solid rgba(255,255,255,.13)}
+.trust div{font-size:13px;color:#a9cbd5}
+.trust b{display:block;color:#fff;font-size:15px;font-weight:700}
+@media(max-width:860px){.hero-in{grid-template-columns:1fr;padding:46px 0 54px;gap:30px}}
+
+/* ============================ SECTIONS ============================ */
+.sec{padding:56px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:26px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(22px,3vw,30px);font-weight:800}
+.sec-head p{color:var(--muted);font-size:14px;margin-top:6px}
+
+/* ============================ PRODUCT GRID ============================ */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:20px}
+.pcard{background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);
+  display:flex;flex-direction:column;transition:.2s;box-shadow:0 2px 8px rgba(6,32,46,.04)}
+.pcard:hover{transform:translateY(-4px);box-shadow:var(--sh2);border-color:#cfe3e8}
+.pcard-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#05202e}
+.pcard-img img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.pcard:hover .pcard-img img{transform:scale(1.06)}
+.tag{position:absolute;top:10px;left:10px;background:rgba(5,32,46,.82);color:#c9f2ee;backdrop-filter:blur(6px);
+  padding:4px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.tag.soon{background:rgba(255,106,69,.9);color:#fff}
+.pcard-b{padding:14px 15px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pcard-b h3{font-size:15.5px;font-weight:700}
+.pcard-sub{font-size:12.5px;color:var(--muted);flex:1}
+.pcard-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px}
+.price{font-weight:800;font-size:17px;letter-spacing:-.02em}
+.price small{font-weight:600;font-size:11.5px;color:var(--muted);display:block;letter-spacing:0}
+
+/* ============================ FILTERS ============================ */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;align-items:center}
+.chip{padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:13.5px;
+  font-weight:600;color:#3d5b67;transition:.15s}
+.chip:hover{border-color:var(--aqua)}
+.chip.on{background:var(--deep);border-color:var(--deep);color:#fff}
+select.inp,input.inp,textarea.inp{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);
+  background:#fff;outline:none;transition:.15s;font-size:14.5px}
+input.inp:focus,select.inp:focus,textarea.inp:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(18,163,163,.14)}
+label.fl{display:block;font-size:12.5px;font-weight:700;color:#45636f;margin:0 0 6px 2px;letter-spacing:.01em}
+
+/* ============================ CARDS / PANELS ============================ */
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 2px 10px rgba(6,32,46,.04)}
+.panel+.panel{margin-top:18px}
+.panel h3{font-size:17px;font-weight:750;margin-bottom:4px}
+.panel .ph{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+
+/* ============================ LAYOUT HELPERS ============================ */
+.split{display:grid;grid-template-columns:1.5fr 1fr;gap:22px;align-items:start}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:860px){.g3,.g4{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+/* ============================ KPI ============================ */
+.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 17px}
+.kpi .k{font-size:11.5px;font-weight:750;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.kpi .v{font-size:26px;font-weight:830;letter-spacing:-.03em;margin-top:6px}
+.kpi .d{font-size:12px;color:var(--muted);margin-top:3px}
+.kpi.accent{background:linear-gradient(150deg,#05202e,#0d4258);color:#fff;border-color:transparent}
+.kpi.accent .k{color:#8fc4d1}.kpi.accent .d{color:#9dc3ce}
+
+/* ============================ CHART ============================ */
+.chart{display:flex;align-items:flex-end;gap:6px;height:170px;padding-top:14px}
+.chart-col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%;text-align:center;min-width:0}
+.chart-bar{background:linear-gradient(180deg,var(--aqua),var(--teal));border-radius:7px 7px 0 0;min-height:4px;
+  position:relative;transition:.3s}
+.chart-bar:hover{filter:brightness(1.12)}
+.chart-lbl{font-size:10.5px;color:var(--muted);margin-top:7px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* ============================ FUNNEL ============================ */
+.funnel{display:flex;flex-direction:column;gap:10px}
+.fn-row{display:grid;grid-template-columns:140px 1fr 64px;gap:12px;align-items:center;font-size:13.5px}
+.fn-track{height:26px;background:#eef4f6;border-radius:8px;overflow:hidden}
+.fn-fill{height:100%;border-radius:8px;background:linear-gradient(90deg,var(--teal),var(--aqua));transition:.5s}
+.fn-val{text-align:right;font-weight:750;font-variant-numeric:tabular-nums}
+@media(max-width:520px){.fn-row{grid-template-columns:96px 1fr 52px;font-size:12px}}
+
+/* ============================ TABLE ============================ */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.tbl{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
+table.tbl th{text-align:left;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  padding:10px 12px;border-bottom:1px solid var(--line);font-weight:750;white-space:nowrap}
+table.tbl td{padding:12px;border-bottom:1px solid #f0f5f7;vertical-align:middle}
+table.tbl tr:last-child td{border-bottom:0}
+table.tbl tr:hover td{background:#fafdfe}
+
+/* ============================ PILLS ============================ */
+.pill{display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border-radius:999px;font-size:11.5px;font-weight:750;
+  letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
+.pill.ok{background:#e5f7ef;color:#12734d}
+.pill.warn{background:#fdf3e2;color:#96601a}
+.pill.info{background:#e6f2fa;color:#1a5d85}
+.pill.danger{background:#fdeaea;color:#a33333}
+.pill.neutral{background:#eef3f5;color:#5a7783}
+.pill.purple{background:#f0eafc;color:#5a3aa8}
+
+/* ============================ TIMELINE ============================ */
+.timeline{position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 20px}
+.timeline li:last-child{padding-bottom:0}
+.timeline .dot{position:absolute;left:-26px;top:3px;width:16px;height:16px;border-radius:50%;
+  background:#fff;border:2.5px solid var(--line)}
+.timeline li.done .dot{background:var(--teal);border-color:var(--teal);box-shadow:0 0 0 4px rgba(18,163,163,.14)}
+.timeline li.cur .dot{background:var(--coral);border-color:var(--coral);box-shadow:0 0 0 5px rgba(255,106,69,.18)}
+.timeline b{font-size:14px;font-weight:700;display:block}
+.timeline small{color:var(--muted);font-size:12px}
+
+/* ============================ TABS ============================ */
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:20px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{padding:10px 17px;border-radius:999px;font-size:13.5px;font-weight:650;color:#456470;
+  border:1px solid var(--line);background:#fff;white-space:nowrap;transition:.15s}
+.tab:hover{border-color:var(--aqua)}
+.tab.on{background:var(--deep);border-color:var(--deep);color:#fff}
+
+/* ============================ CART ============================ */
+.citem{display:grid;grid-template-columns:88px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid #eff4f6}
+.citem:last-child{border-bottom:0}
+.citem img{width:88px;height:70px;object-fit:cover;border-radius:12px}
+.qty{display:inline-flex;align-items:center;gap:2px;border:1px solid var(--line);border-radius:999px;background:#fff}
+.qty button{width:32px;height:32px;display:grid;place-items:center;font-weight:800;color:#3d5b67;border-radius:999px}
+.qty button:hover{background:#eef6f8}
+.qty span{min-width:26px;text-align:center;font-weight:750;font-size:14px}
+@media(max-width:560px){.citem{grid-template-columns:70px 1fr;gap:10px}.citem img{width:70px;height:60px}
+  .citem .c-actions{grid-column:2;display:flex;justify-content:space-between;align-items:center;margin-top:8px}}
+
+/* ============================ SUMMARY ============================ */
+.sum-row{display:flex;justify-content:space-between;padding:9px 0;font-size:14.5px;color:#3d5b67}
+.sum-row.total{border-top:1px solid var(--line);margin-top:8px;padding-top:14px;font-size:19px;font-weight:830;color:var(--ink)}
+
+/* ============================ AD PREVIEW ============================ */
+.ad{max-width:420px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--sh)}
+.ad-top{display:flex;align-items:center;gap:10px;padding:12px 14px}
+.ad-top b{font-size:13.5px;display:block}
+.ad-top small{font-size:11.5px;color:var(--muted)}
+.ad img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.ad-body{padding:14px}
+.ad-body b{font-size:15.5px;display:block;margin-bottom:6px}
+.ad-body p{font-size:13.5px;color:#42606c}
+.ad-tags{color:#1a7f9c!important;margin-top:8px;font-size:12.5px!important}
+.ad-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;
+  border-top:1px solid var(--line);background:#f8fbfc}
+.ad-foot span{font-size:11.5px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* ============================ LANDING ============================ */
+.lp-hero{background:linear-gradient(160deg,#05202e,#0a3a52);color:#fff;border-radius:22px;overflow:hidden;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:0;box-shadow:var(--sh2)}
+.lp-hero .lp-copy{padding:44px}
+.lp-hero h1{font-size:clamp(26px,3.6vw,42px);font-weight:830;letter-spacing:-.035em}
+.lp-hero p{margin-top:14px;color:#bcd8e0;font-size:16px;max-width:460px}
+.lp-hero img{width:100%;height:100%;object-fit:cover;min-height:300px}
+@media(max-width:820px){.lp-hero{grid-template-columns:1fr}.lp-hero .lp-copy{padding:30px}}
+
+/* ============================ AUTH ============================ */
+.auth-wrap{max-width:440px;margin:46px auto}
+.auth-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:var(--sh)}
+.auth-card h2{font-size:23px;font-weight:800;margin-bottom:6px}
+
+/* ============================ TOAST ============================ */
+#toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(140%);z-index:200;
+  background:var(--deep);color:#fff;padding:13px 22px;border-radius:999px;font-size:14px;font-weight:600;
+  box-shadow:var(--sh2);transition:.32s cubic-bezier(.2,.9,.3,1.3);max-width:90vw;text-align:center}
+#toast.show{transform:translateX(-50%) translateY(0)}
+
+/* ============================ MISC ============================ */
+.empty{text-align:center;padding:52px 20px;color:var(--muted)}
+.empty h3{font-size:19px;color:var(--ink);margin-bottom:8px}
+.note{background:#eef8fa;border:1px solid #d3ebef;border-radius:12px;padding:12px 14px;font-size:13px;color:#2c5d6b}
+.note.warn{background:#fdf7ea;border-color:#f3e3c4;color:#7a5a1c}
+.note.ok{background:#eaf8f1;border-color:#cfecdd;color:#1a6a49}
+.ftr{background:var(--deep);color:#9fc0cb;margin-top:60px;padding:44px 0 30px;font-size:13.5px}
+.ftr h4{color:#fff;font-size:14px;margin-bottom:12px;font-weight:750}
+.ftr a{display:block;padding:5px 0;color:#9fc0cb}
+.ftr a:hover{color:var(--aqua)}
+.ftr-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:28px}
+@media(max-width:760px){.ftr-grid{grid-template-columns:1fr 1fr}}
+.ftr-bot{border-top:1px solid rgba(255,255,255,.1);margin-top:30px;padding-top:20px;display:flex;
+  justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#7ea4b1}
+.swatch{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:middle}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr"></header>
+<main id="app"></main>
+<footer class="ftr" id="ftr"></footer>
+<div id="toast"></div>
+
+<script>
+/* =====================================================================
+   OFF THE HOOK — single-file storefront + dashboards + pull marketing
+   ===================================================================== */
+
+/* ------------------------------ UTILITIES ------------------------------ */
+const $  = (s,r=document)=>r.querySelector(s);
+const $$ = (s,r=document)=>Array.from(r.querySelectorAll(s));
+const esc = s => String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money = n => 'R' + (Number(n)||0).toFixed(2);
+const uid = p => p + Math.random().toString(36).slice(2,9);
+const rng = seed => { let s=(seed>>>0)||1; return ()=>((s=(s*1664525+1013904223)>>>0)/4294967296); };
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const pickR = (arr,R)=>arr[Math.floor(R()*arr.length)];
+const hashPw = s => { let h=5381; for(let i=0;i<s.length;i++) h=((h<<5)+h+s.charCodeAt(i))>>>0; return h.toString(16); };
+const fmtDate = t => new Date(t).toLocaleDateString('en-ZA',{day:'2-digit',month:'short',year:'numeric'});
+const fmtDT   = t => new Date(t).toLocaleString('en-ZA',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
+const pct = (a,b)=> b>0 ? (a/b*100) : 0;
+const pctS = (a,b)=> pct(a,b).toFixed(1)+'%';
+
+function toast(msg,ms=2400){
+  const t=$('#toast'); t.textContent=msg; t.classList.add('show');
+  clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('show'),ms);
+}
+
+/* ------------------------------ ART ENGINE (procedural "AI" imagery) ------------------------------ */
+function artDataURI(o){
+  const {hue=196,kind='fish',seed=7,w=800,h=600}=o;
+  const R=rng(seed*7919+13);
+  const bgA=`hsl(${hue} 62% 8%)`, bgB=`hsl(${(hue+35)%360} 58% 22%)`;
+  const b1=`hsl(${(hue+10)%360} 66% 65%)`, b2=`hsl(${(hue+42)%360} 68% 36%)`;
+  const fin=`hsl(${(hue+62)%360} 76% 56%)`;
+
+  let deco='';
+  for(let i=0;i<18;i++){
+    deco+=`<circle cx="${(R()*w)|0}" cy="${(R()*h)|0}" r="${(2+R()*9).toFixed(1)}" fill="#e8fbff" opacity="${(0.03+R()*0.09).toFixed(2)}"/>`;
+  }
+  let waves='';
+  for(let i=0;i<5;i++){
+    const y=h*0.68+i*18;
+    waves+=`<path d="M0 ${y} Q ${w*0.25} ${y-26} ${w*0.5} ${y} T ${w} ${y} L${w} ${h} L0 ${h} Z" fill="hsl(${(hue+18)%360} 55% ${13+i*4}%)" opacity=".8"/>`;
+  }
+
+  const s=w/800;
+  let subj='';
+  if(kind==='fish'){
+    subj=`<g transform="translate(${w/2} ${h*0.44}) scale(${(s*1.2).toFixed(3)})">
+      <path d="M-150 0 L-262 -80 L-228 0 L-262 80 Z" fill="url(#bd)"/>
+      <ellipse cx="0" cy="0" rx="168" ry="84" fill="url(#bd)"/>
+      <path d="M-16 -80 Q36 -144 102 -92 Q44 -96 4 -78 Z" fill="${fin}" opacity=".85"/>
+      <path d="M-20 80 Q26 134 84 92 Q36 96 -4 80 Z" fill="${fin}" opacity=".55"/>
+      <circle cx="104" cy="-26" r="17" fill="#fff"/><circle cx="111" cy="-26" r="9" fill="#06202c"/>
+      <path d="M148 4 Q176 17 148 31" stroke="${fin}" stroke-width="6" fill="none" stroke-linecap="round"/>
+    </g>`;
+  } else if(kind==='eggs'){
+    subj=`<g transform="translate(${w/2} ${h*0.47}) scale(${(s*1.15).toFixed(3)})">
+      <ellipse cx="-116" cy="14" rx="60" ry="78" fill="url(#bd)"/>
+      <ellipse cx="6" cy="-22" rx="66" ry="86" fill="url(#bd)"/>
+      <ellipse cx="122" cy="18" rx="58" ry="76" fill="url(#bd)"/>
+      <ellipse cx="-136" cy="-20" rx="17" ry="23" fill="#fff" opacity=".22"/>
+      <ellipse cx="-12" cy="-60" rx="19" ry="25" fill="#fff" opacity=".22"/>
+      <ellipse cx="104" cy="-16" rx="16" ry="22" fill="#fff" opacity=".22"/>
+    </g>`;
+  } else {
+    subj=`<g transform="translate(${w/2} ${h*0.50}) scale(${(s*1.1).toFixed(3)})">
+      <ellipse cx="0" cy="24" rx="148" ry="104" fill="url(#bd)"/>
+      <circle cx="108" cy="-82" r="56" fill="url(#bd)"/>
+      <path d="M96 -136 q18 -34 34 -6 q16 -30 30 4 z" fill="${fin}"/>
+      <path d="M160 -78 l46 16 l-46 18 z" fill="${fin}"/>
+      <circle cx="126" cy="-94" r="10" fill="#fff"/><circle cx="129" cy="-94" r="5" fill="#06202c"/>
+      <path d="M-42 122 l-10 46 M32 122 l10 46" stroke="${fin}" stroke-width="9" stroke-linecap="round"/>
+      <path d="M-140 -8 q-52 -30 -62 22 q42 20 62 8 z" fill="${fin}" opacity=".65"/>
+    </g>`;
+  }
+
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="${bgA}"/><stop offset="1" stop-color="${bgB}"/></linearGradient>
+<linearGradient id="bd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${b1}"/><stop offset="1" stop-color="${b2}"/></linearGradient>
+<radialGradient id="gl" cx="0.5" cy="0.4" r="0.65"><stop offset="0" stop-color="${b1}" stop-opacity=".32"/><stop offset="1" stop-color="${b1}" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="${w}" height="${h}" fill="url(#bg)"/>
+<rect width="${w}" height="${h}" fill="url(#gl)"/>
+${deco}<g>${waves}</g>${subj}
+</svg>`;
+  return 'data:image/svg+xml,'+encodeURIComponent(svg);
+}
+const _artCache={};
+function art(key,opts){ if(!_artCache[key]) _artCache[key]=artDataURI(opts); return _artCache[key]; }
+
+function logoSVG(size=38){
+  return `<svg width="${size}" height="${size}" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+<defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#5fd6cf"/><stop offset="1" stop-color="#12a3a3"/></linearGradient></defs>
+<rect x="1.5" y="1.5" width="45" height="45" rx="13" fill="#05202e"/>
+<rect x="1.5" y="1.5" width="45" height="45" rx="13" stroke="url(#lg)" stroke-width="2"/>
+<path d="M17 11 v13.5 a7.2 7.2 0 0 0 14.4 0 v-2" stroke="url(#lg)" stroke-width="3.3" stroke-linecap="round" fill="none"/>
+<path d="M31.4 20.6 l5 4.2 l-5 4.2 z" fill="#ff6a45"/>
+<circle cx="17" cy="9.4" r="2.7" fill="#ff6a45"/></svg>`;
+}
+
+/* ------------------------------ CATALOGUE ------------------------------ */
+const CATALOGUE = [
+  {id:'p1', name:'Hake Fillets',        sub:'Skinless & boneless · 1kg',        cat:'fish',    type:'frozen', price:129.99, unit:'1kg',       hue:196, kind:'fish',    stock:84,
+   desc:'Thick, white hake fillets, skinless and boneless, individually frozen so you can take out exactly what you need and keep the rest for later.'},
+  {id:'p2', name:'Salmon Fillets',      sub:'Thick cut · 500g',                 cat:'fish',    type:'fresh',  price:289.99, unit:'500g',      hue:12,  kind:'fish',    stock:22,
+   desc:'Rich, buttery salmon fillets cut thick for the pan or the oven. Naturally high in omega-3 oils and beautifully marbled.'},
+  {id:'p3', name:'Gurnard Whole',       sub:'Cleaned & scaled · per kg',        cat:'fish',    type:'fresh',  price:99.99,  unit:'per kg',    hue:32,  kind:'fish',    stock:17,
+   desc:'Whole gurnard, cleaned and scaled. Firm, sweet white meat that holds together beautifully on the coals or in a curry.'},
+  {id:'p4', name:'Braai Snoek',         sub:'Gutted & cleaned · ±1.2kg',        cat:'fish',    type:'fresh',  price:149.99, unit:'±1.2kg',    hue:205, kind:'fish',    stock:31,
+   desc:'Whole snoek, gutted and cleaned, ready for the grid. A West Coast classic — apricot jam glaze optional but strongly encouraged.'},
+  {id:'p5', name:'Klingklip Fillets',   sub:'Vacuum packed · 1kg',              cat:'fish',    type:'frozen', price:119.99, unit:'1kg',       hue:172, kind:'fish',    stock:46,
+   desc:'Meaty klingklip fillets, vacuum packed and frozen at source so the texture stays exactly where it should be.'},
+  {id:'p6', name:'Chokka Whole',        sub:'Cleaned · 1kg',                    cat:'fish',    type:'frozen', price:89.99,  unit:'1kg',       hue:284, kind:'fish',    stock:38,
+   desc:'Whole cleaned chokka. Tenderise it, grill it fast and hot, or cut it into rings for a proper seafood curry.'},
+  {id:'p7', name:'Fish Sticks',         sub:'Crumbed · 800g',                   cat:'fish',    type:'frozen', price:69.99,  unit:'800g',      hue:44,  kind:'fish',    stock:120,
+   desc:'Crumbed fish sticks that actually taste like fish. Oven, air fryer or pan — ready in minutes.'},
+  {id:'p8', name:'Free Range Eggs',     sub:'Large brown · 18s',                cat:'eggs',    type:'fresh',  price:59.99,  unit:'18 eggs',   hue:38,  kind:'eggs',    stock:64,
+   desc:'Free range eggs from hens that range outdoors. Large, brown, with firm deep-yellow yolks.'},
+  {id:'p9', name:'Free Range Chicken',  sub:'Whole · ±1.6kg',                   cat:'chicken', type:'fresh',  price:109.99, unit:'±1.6kg',    hue:24,  kind:'chicken', stock:26,
+   desc:'Whole free range chicken, slow grown for proper flavour. Roast it whole, spatchcock it, or break it down into portions.'},
+  {id:'p10',name:'Smoked Hake',         sub:'Hot smoked · 500g',                cat:'fish',    type:'frozen', price:139.99, unit:'500g',      hue:20,  kind:'fish',    stock:0, soon:true,
+   desc:'Hot smoked hake, flaking into big soft chunks. Landing soon — join the range as it grows.'},
+  {id:'p11',name:'Prawn Tails',         sub:'Peeled & deveined · 1kg',          cat:'fish',    type:'frozen', price:249.99, unit:'1kg',       hue:6,   kind:'fish',    stock:0, soon:true,
+   desc:'Peeled and deveined prawn tails. Coming to the range next — watch this space.'},
+];
+const STATUSES = ['Order received','Payment confirmed','Packed','Out for delivery','Delivered'];
+
+/* ------------------------------ DATABASE ------------------------------ */
+const KEY='oth_db_v1';
+let DB=null;
+
+function seedDB(){
+  DB={
+    products: CATALOGUE.map(p=>({...p})),
+    users:[
+      {id:'u_owner', name:'Owner',  email:'owner@offthehook.co.za', pw:hashPw('owner123'), role:'owner', created:Date.now()-86400000*300},
+      {id:'u_admin', name:'Admin',  email:'admin@offthehook.co.za', pw:hashPw('admin123'), role:'admin', created:Date.now()-86400000*180},
+      {id:'u_client',name:'Sam Client', email:'client@offthehook.co.za', pw:hashPw('client123'), role:'client', created:Date.now()-86400000*90,
+       phone:'082 555 0199', address:'14 Harbour Road', city:'Cape Town', postal:'8001'},
+    ],
+    orders:[],
+    campaigns:[],
+    analytics:{sessions:{}},
+    log:[],
+  };
+  seedOrders();
+  seedCampaigns();
+  seedAnalytics();
+  save();
+}
+function load(){
+  try{ DB=JSON.parse(localStorage.getItem(KEY)); }catch(e){ DB=null; }
+  if(!DB || !DB.products) seedDB();
+}
+function save(){ try{ localStorage.setItem(KEY,JSON.stringify(DB)); }catch(e){} }
+function logAct(who,what){ DB.log.unshift({id:uid('l'),who,what,t:Date.now()}); DB.log=DB.log.slice(0,120); }
+
+/* ------------------------------ SEED: CAMPAIGNS ------------------------------ */
+function seedCampaigns(){
+  const specs=[
+    {slug:'braai-snoek-weekend', productId:'p4', platform:'Instagram', angle:'braai',      tone:'warm',    format:'Static post',  seed:11},
+    {slug:'hake-midweek-easy',   productId:'p1', platform:'Facebook',  angle:'convenience',tone:'straight',format:'Carousel',     seed:22},
+    {slug:'salmon-omega-pan',    productId:'p2', platform:'Pinterest', angle:'health',     tone:'premium', format:'Static post',  seed:33},
+    {slug:'free-range-eggs',     productId:'p8', platform:'Instagram', angle:'family',     tone:'warm',    format:'Story / Reel', seed:44},
+    {slug:'chokka-fast-grill',   productId:'p6', platform:'TikTok',    angle:'convenience',tone:'playful', format:'Story / Reel', seed:55},
+  ];
+  DB.campaigns = specs.map(s=>{
+    const p=DB.products.find(x=>x.id===s.productId);
+    const c=generateCreative({product:p,platform:s.platform,angle:s.angle,tone:s.tone,format:s.format}, rng(s.seed*7919));
+    c.slug=s.slug; c.published=true; c.createdAt=Date.now()-86400000*(5+ (s.seed%9));
+    return c;
+  });
+}
+
+/* ------------------------------ SEED: ORDERS ------------------------------ */
+function seedOrders(){
+  const R=rng(99117);
+  const buyers=[
+    {id:'u_client', name:'Sam Client', email:'client@offthehook.co.za', address:'14 Harbour Road', city:'Cape Town', postal:'8001'},
+    {id:'g1', name:'Thandi M.', email:'thandi@example.co.za', address:'8 Voortrekker St', city:'Paarl', postal:'7646'},
+    {id:'g2', name:'Riaan B.',  email:'riaan@example.co.za',  address:'22 Beach Rd', city:'Strand', postal:'7140'},
+    {id:'g3', name:'Nadia K.',  email:'nadia@example.co.za',  address:'5 Long St', city:'Durbanville', postal:'7550'},
+  ];
+  const now=Date.now();
+  for(let i=0;i<18;i++){
+    const b=buyers[Math.floor(R()*buyers.length)];
+    const items=[]; const n=1+Math.floor(R()*3);
+    for(let j=0;j<n;j++){
+      const p=DB.products[Math.floor(R()*9)];
+      if(!items.find(x=>x.id===p.id)) items.push({id:p.id,name:p.name,price:p.price,qty:1+Math.floor(R()*2)});
+    }
+    const sub=items.reduce((a,x)=>a+x.price*x.qty,0);
+    const del = sub>600?0:65;
+    const created = now - Math.floor(R()*14)*86400000 - Math.floor(R()*20)*3600000;
+    const si = Math.floor(R()*5);
+    const history=STATUSES.slice(0,si+1).map((s,k)=>({status:s,t:created+k*3600000*(3+Math.floor(R()*6))}));
+    DB.orders.push({
+      id:'OTH-'+(100345+i*7),
+      userId:b.id, name:b.name, email:b.email, phone:'08'+(Math.floor(R()*90000000)+10000000),
+      address:b.address, city:b.city, postal:b.postal,
+      items, sub, delivery:del, total:sub+del,
+      payment:['Card','EFT','Cash on delivery'][Math.floor(R()*3)],
+      status:STATUSES[si], history, created, campaign:['braai-snoek-weekend','hake-midweek-easy','salmon-omega-pan','free-range-eggs','direct'][Math.floor(R()*5)],
+    });
+  }
+  DB.orders.sort((a,b)=>b.created-a.created);
+}
+
+/* ------------------------------ SEED: ANALYTICS ------------------------------ */
+function seedAnalytics(){
+  const R=rng(20240517);
+  const sources=[['instagram',30],['facebook',18],['tiktok',20],['pinterest',10],['google',12],['direct',7],['whatsapp',3]];
+  const pool=[]; sources.forEach(([s,w])=>{ for(let i=0;i<w;i++) pool.push(s); });
+  const camps=['braai-snoek-weekend','hake-midweek-easy','salmon-omega-pan','free-range-eggs','chokka-fast-grill'];
+  const now=Date.now();
+
+  for(let i=0;i<260;i++){
+    const src=pool[Math.floor(R()*pool.length)];
+    const camp = src==='direct'||src==='google' ? null : camps[Math.floor(R()*camps.length)];
+    const start = now - Math.floor(R()*14)*86400000 - Math.floor(R()*86400000);
+    const pv = 1+Math.floor(R()*Math.pow(R(),1.6)*6);
+    const pageviews=[];
+    const landing = camp ? '/l/'+camp : '/';
+    pageviews.push({path:landing,t:start});
+    for(let k=1;k<pv;k++) pageviews.push({path:['/shop','/product/p1','/product/p4','/cart','/product/p2','/product/p8'][Math.floor(R()*6)],t:start+k*45000});
+
+    const events=[];
+    const r1=R();
+    if(r1<0.46) events.push({type:'view_product',t:start+20000});
+    if(r1<0.19) events.push({type:'add_to_cart',t:start+60000});
+    if(r1<0.085) events.push({type:'checkout_start',t:start+90000});
+    const converted = r1<0.048;
+    if(converted) events.push({type:'purchase',t:start+130000});
+
+    DB.analytics.sessions[uid('s')]={
+      id:uid('s'), source:src, campaign:camp, landing,
+      first:start, last:start+ (pv*45000) + events.length*20000,
+      pageviews, events, converted, demo:true
+    };
+  }
+}
+
+/* ------------------------------ SESSION / ANALYTICS TRACKING ------------------------------ */
+let SESSION=null;
+function currentSession(){
+  if(SESSION) return SESSION;
+  let sid=sessionStorage.getItem('oth_sid');
+  if(!sid){ sid=uid('s'); sessionStorage.setItem('oth_sid',sid); }
+  if(!DB.analytics.sessions[sid]){
+    DB.analytics.sessions[sid]={id:sid,source:'direct',campaign:null,landing:location.hash||'/',first:Date.now(),last:Date.now(),pageviews:[],events:[],converted:false};
+  }
+  SESSION=DB.analytics.sessions[sid];
+  return SESSION;
+}
+function track(type,meta={}){
+  const s=currentSession(); s.events.push({type,meta,t:Date.now()}); s.last=Date.now(); save();
+}
+function trackPage(path){
+  const s=currentSession();
+  s.pageviews.push({path,t:Date.now()});
+  s.last=Date.now();
+  if(!s.landing) s.landing=path;
+  save();
+}
+function setAttribution(q){
+  const s=currentSession();
+  if(s.source==='direct' && q && q.src){ s.source=q.src; }
+  if(q && q.c && !s.campaign){ s.campaign=q.c; }
+  if(q && q.src && s.landing==='/'){ s.landing = location.hash.replace(/^#/,'') || '/'; }
+  save();
+}
+
+/* ------------------------------ ANALYTICS MATH ------------------------------ */
+function computeAnalytics(filterFn){
+  let sessions=Object.values(DB.analytics.sessions);
+  if(filterFn) sessions=sessions.filter(filterFn);
+  const total=sessions.length;
+  const bounced=sessions.filter(s=>s.pageviews.length<=1 && s.events.length===0).length;
+  const converted=sessions.filter(s=>s.converted).length;
+  const pv=sessions.reduce((a,s)=>a+s.pageviews.length,0);
+  const has=t=>sessions.filter(s=>s.events.some(e=>e.type===t)).length;
+
+  const orders=DB.orders.filter(o=>o.status!=='Cancelled');
+  const revenue=orders.reduce((a,o)=>a+o.total,0);
+
+  const bySource={};
+  sessions.forEach(s=>{ bySource[s.source]=bySource[s.source]||{sessions:0,converted:0,bounced:0};
+    bySource[s.source].sessions++; if(s.converted)bySource[s.source].converted++; if(s.pageviews.length<=1&&!s.events.length)bySource[s.source].bounced++; });
+
+  const byCampaign={};
+  sessions.filter(s=>s.campaign).forEach(s=>{
+    const k=s.campaign; byCampaign[k]=byCampaign[k]||{sessions:0,converted:0,bounced:0,adds:0,views:0};
+    byCampaign[k].sessions++; if(s.converted)byCampaign[k].converted++;
+    if(s.pageviews.length<=1&&!s.events.length)byCampaign[k].bounced++;
+    if(s.events.some(e=>e.type==='add_to_cart'))byCampaign[k].adds++;
+    byCampaign[k].views += s.pageviews.filter(p=>p.path.startsWith('/l/')).length;
+  });
+
+  return {
+    total, pv, bounced, converted,
+    bounceRate: total?bounced/total*100:0,
+    convRate: total?converted/total*100:0,
+    productViews: has('view_product'),
+    adds: has('add_to_cart'),
+    checkouts: has('checkout_start'),
+    revenue, orders: DB.orders.length,
+    aov: orders.length?revenue/orders.length:0,
+    bySource, byCampaign,
+  };
+}
+function dailySeries(days=14){
+  const out=[];
+  const now=new Date(); now.setHours(23,59,59,999);
+  for(let i=days-1;i>=0;i--){
+    const d=new Date(now.getTime()-i*86400000);
+    const start=new Date(d); start.setHours(0,0,0,0);
+    const end=new Date(d); end.setHours(23,59,59,999);
+    const ss=Object.values(DB.analytics.sessions).filter(s=>s.first>=start.getTime()&&s.first<=end.getTime());
+    const ords=DB.orders.filter(o=>o.created>=start.getTime()&&o.created<=end.getTime());
+    out.push({label:d.toLocaleDateString('en-ZA',{day:'2-digit',month:'short'}),sessions:ss.length,orders:ords.length,
+      revenue:ords.reduce((a,o)=>a+o.total,0)});
+  }
+  return out;
+}
+function barChart(data,valKey){
+  const max=Math.max(...data.map(d=>d[valKey]),1);
+  return `<div class="chart">${data.map(d=>`
+    <div class="chart-col" title="${esc(d.label)}: ${d[valKey]}">
+      <div class="chart-bar" style="height:${clamp(d[valKey]/max*100,2,100).toFixed(1)}%"></div>
+      <div class="chart-lbl">${esc(d.label)}</div>
+    </div>`).join('')}</div>`;
+}
+
+/* ------------------------------ AI MARKETING CONTENT ENGINE ------------------------------ */
+const ANGLES={
+  freshness:{label:'Freshness',hueShift:0,
+    heads:['{p}, landed cold and packed cold','{p} — the cold chain never breaks','From the boat to your fridge, {p}'],
+    benefits:['Handled in a single unbroken cold chain','Packed the day it lands','No thaw-and-refreeze guesswork']},
+  value:{label:'Value',hueShift:-12,
+    heads:['{p} at a price that makes sense','Feed the family on {p}','Real {p}, honest pricing'],
+    benefits:['Bulk packs that actually stretch','One price, no hidden extras','Cheaper per portion than you think']},
+  braai:{label:'Braai & weekend',hueShift:18,
+    heads:['{p} belongs on the grid','Weekend plans: {p} and good company','Get the coals right, the {p} does the rest'],
+    benefits:['Cut and cleaned ready for the grid','Holds together over open flame','Feeds a crowd without fuss']},
+  health:{label:'Health & nutrition',hueShift:-30,
+    heads:['{p} — protein that pulls its weight','Simple food that does you good','{p}, the way your body likes it'],
+    benefits:['Naturally high in quality protein','No added sauces or coatings','Fits a straightforward weekly menu']},
+  convenience:{label:'Convenience',hueShift:10,
+    heads:['{p} in the pan in under fifteen minutes','Midweek sorted with {p}','Dinner, without the drama'],
+    benefits:['Portioned so you take out only what you need','Freezer to pan, no long prep','Works with whatever is in the cupboard']},
+  family:{label:'Family',hueShift:26,
+    heads:['{p} that everyone at the table agrees on','Feeding the family, properly','The {p} the kids actually finish'],
+    benefits:['Mild, flaky and easy to eat','Portion sizes for real households','Freezer-friendly for busy weeks']},
+};
+const TONES={
+  warm:{label:'Warm & homely',close:['Made for real kitchens.','From our cold room to your table.','Simple food, done properly.']},
+  bold:{label:'Bold & direct',close:['No nonsense. Just good fish.','Straight up. Straight from the cold chain.','Good product. That is the whole pitch.']},
+  playful:{label:'Playful',close:['Your grid will thank you.','Go on, get the pan out.','Coals on, worries off.']},
+  premium:{label:'Premium & calm',close:['Sourced with care, packed with care.','A cut worth taking your time over.','Quietly excellent.']},
+  straight:{label:'Straight-talking',close:['That is what it is.','Nothing added, nothing hidden.','Order it, cook it, enjoy it.']},
+};
+const CTA_BY_PLATFORM={
+  Instagram:'Tap the link in bio',
+  Facebook:'See the full range',
+  TikTok:'Link in bio',
+  Pinterest:'See the product',
+  Google:'View the range',
+  'In-store':'Ask at the counter',
+};
+function generateCreative(o,R){
+  R=R||Math.random;
+  const {product:p,platform,angle,tone,format}=o;
+  const A=ANGLES[angle]||ANGLES.freshness;
+  const T=TONES[tone]||TONES.straight;
+  const fill=s=>s.replace(/\{p\}/g,p.name).replace(/\{unit\}/g,p.unit);
+  const headline=fill(pickR(A.heads,R));
+  const benefit=pickR(A.benefits,R);
+  const close=pickR(T.close,R);
+  const body = `${fill(pickR(A.benefits,R))}. ${p.sub}. ${close}`;
+  const cta  = CTA_BY_PLATFORM[platform]||'See the range';
+  const tags = ['#OffTheHook','#'+p.name.replace(/[^A-Za-z]/g,''),'#FreshFish','#Seafood',angle==='braai'?'#BraaiDay':'#HomeCooking','#SupportLocal'];
+  const hue  = (p.hue + (A.hueShift||0) + 360)%360;
+  const seed = Math.floor(R()*99999)+7;
+  const artURI = artDataURI({hue,kind:p.kind,seed,w:900,h:675});
+  const slug = (p.name.toLowerCase().replace(/[^a-z0-9]+/g,'-')+'-'+angle+'-'+Math.floor(R()*9000+1000));
+  const imagePrompt = `Editorial food photograph of ${p.name} (${p.sub}) on a dark slate surface, `+
+    `cool teal rim light, ${A.label.toLowerCase()} mood, shallow depth of field, water droplets, high detail, `+
+    `no text, no logos, 4:3, natural tones, honest product styling.`;
+
+  return {
+    id:uid('c'), slug, productId:p.id, productName:p.name, platform, angle, tone, format,
+    headline, body, cta, hashtags:tags, imagePrompt, art:artURI, hue, seed,
+    landing:{
+      hero: headline,
+      sub: `${p.desc}`,
+      benefits: A.benefits.slice(0,3),
+      faq:[
+        {q:'How is it delivered?',a:'Cold chain, door to door. Delivery is free on orders over R600, otherwise R65 flat.'},
+        {q:'Is anything added?',a:'No. What you see on the label is what is in the pack.'},
+        {q:'Can I track my order?',a:'Yes — every order gets a tracking number you can check any time on the Track Order page.'},
+      ]
+    },
+    published:true, createdAt:Date.now(), views:0, adds:0
+  };
+}
+const COMPLIANCE_FLAGS=['today only','limited time','hurry','act now','best in the world','guaranteed','miracle','cure','100% free','once in a lifetime','last chance','shocking'];
+function checkCompliance(text){
+  const low=text.toLowerCase();
+  return COMPLIANCE_FLAGS.filter(f=>low.includes(f));
+}
+
+/* ------------------------------ STATE ------------------------------ */
+const state={
+  cart: JSON.parse(localStorage.getItem('oth_cart')||'[]'),
+  user: null,
+  studio: null,
+};
+function saveCart(){ localStorage.setItem('oth_cart',JSON.stringify(state.cart)); }
+function cartCount(){ return state.cart.reduce((a,x)=>a+x.qty,0); }
+function cartLines(){
+  return state.cart.map(l=>{ const p=DB.products.find(x=>x.id===l.id); return p?{...p,qty:l.qty}:null; }).filter(Boolean);
+}
+function cartSub(){ return cartLines().reduce((a,x)=>a+x.price*x.qty,0); }
+function cartDelivery(){ const s=cartSub(); return (s>0 && s<600)?65:0; }
+function addToCart(id,qty=1){
+  const p=DB.products.find(x=>x.id===id); if(!p||p.soon) return;
+  const line=state.cart.find(x=>x.id===id);
+  if(line) line.qty+=qty; else state.cart.push({id,qty});
+  saveCart(); track('add_to_cart',{id}); toast(p.name+' added to cart'); render();
+}
+function setQty(id,qty){
+  const line=state.cart.find(x=>x.id===id); if(!line) return;
+  line.qty=qty; if(line.qty<=0) state.cart=state.cart.filter(x=>x.id!==id);
+  saveCart(); render();
+}
+function restoreUser(){
+  const uidv=localStorage.getItem('oth_uid');
+  if(uidv){ const u=DB.users.find(x=>x.id===uidv); if(u) state.user=u; }
+}
+
+/* ------------------------------ ROUTER ------------------------------ */
+function parseRoute(){
+  const raw=(location.hash||'').replace(/^#\/?/,'');
+  const [pathPart,queryPart]=raw.split('?');
+  const parts=pathPart.split('/').filter(Boolean);
+  const q=Object.fromEntries(new URLSearchParams(queryPart||''));
+  return {name:parts[0]||'home',args:parts.slice(1),q};
+}
+const GUARDS={ account:'user', admin:'staff', owner:'owner', studio:'staff', orders:'user' };
+function canAccess(level){
+  const u=state.user;
+  if(level==='user') return !!u;
+  if(level==='staff') return !!u && (u.role==='admin'||u.role==='owner');
+  if(level==='owner') return !!u && u.role==='owner';
+  return true;
+}
+
+function render(){
+  const r=parseRoute();
+  setAttribution(r.q);
+
+  // header
+  const navItems=[['#/','Home'],['#/shop','Shop'],['#/track','Track order']];
+  if(state.user && (state.user.role==='admin'||state.user.role==='owner')) navItems.push(['#/admin','Admin']);
+  if(state.user && state.user.role==='owner') navItems.push(['#/owner','Owner']);
+  if(state.user && state.user.role==='client') navItems.push(['#/account','My orders']);
+
+  const cur='#/'+(r.name==='home'?'':r.name);
+  $('#hdr').innerHTML=`
+  <div class="wrap hdr-in">
+    <a class="brand" href="#/">${logoSVG(38)}<span>Off the <i>Hook</i></span></a>
+    <nav class="nav">
+      ${navItems.map(([h,l])=>`<a href="${h}" class="${cur===h?'on':''}">${l}</a>`).join('')}
+    </nav>
+    <div class="hdr-right">
+      <a class="icon-btn" href="#/cart">🛒<span class="lbl">Cart</span>${cartCount()?`<span class="badge">${cartCount()}</span>`:''}</a>
+      ${state.user
+        ? `<a class="icon-btn" href="#/${state.user.role==='client'?'account':(state.user.role==='owner'?'owner':'admin')}">👤<span class="lbl">${esc(state.user.name.split(' ')[0])}</span></a>`
+        : `<a class="icon-btn" href="#/login">👤<span class="lbl">Sign in</span></a>`}
+      <button class="burger" data-act="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+  <div class="mnav wrap">
+    ${navItems.map(([h,l])=>`<a href="${h}">${l}</a>`).join('')}
+    ${state.user?`<a href="#/cart">Cart (${cartCount()})</a><a href="#" data-act="logout">Sign out</a>`:`<a href="#/login">Sign in</a>`}
+  </div>`;
+
+  // main
+  const app=$('#app');
+  const guard=GUARDS[r.name];
+  if(guard && !canAccess(guard)){
+    app.innerHTML=viewDenied(guard);
+    trackPage('/denied');
+    return;
+  }
+  const view=ROUTES[r.name]||view404;
+  app.innerHTML=view(r);
+  trackPage('/'+r.name+(r.args[0]?'/'+r.args[0]:''));
+
+  // footer
+  $('#ftr').innerHTML=`
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <div class="brand" style="color:#fff">${logoSVG(36)}<span>Off the <i>Hook</i></span></div>
+        <p style="margin-top:14px;max-width:300px">Fresh and frozen fish, free range eggs and free range chicken. Cold chain from our door to yours.</p>
+      </div>
+      <div><h4>Shop</h4>
+        <a href="#/shop?f=fresh">Fresh fish</a><a href="#/shop?f=frozen">Frozen fish</a>
+        <a href="#/shop?f=eggs">Eggs</a><a href="#/shop?f=chicken">Chicken</a></div>
+      <div><h4>Help</h4>
+        <a href="#/track">Track your order</a><a href="#/shop">Delivery info</a>
+        <a href="#/login">Sign in</a></div>
+      <div><h4>Company</h4>
+        <a href="#/">About Off the Hook</a><a href="#/">Contact</a></div>
+    </div>
+    <div class="ftr-bot">
+      <span>© ${new Date().getFullYear()} Off the Hook. All rights reserved.</span>
+      <span>Secure checkout · Cold chain delivery · No spam, ever</span>
+    </div>
+  </div>`;
+}
+
+/* =====================================================================
+   VIEWS
+   ===================================================================== */
+function viewDenied(level){
+  return `<div class="wrap"><div class="empty" style="padding:90px 20px">
+    <div style="font-size:44px">🔒</div>
+    <h3>Access restricted</h3>
+    <p>This dashboard is only available to ${level==='owner'?'the owner account':level==='staff'?'admin and owner accounts':'signed-in customers'}.</p>
+    <div style="margin-top:20px"><a class="btn btn-primary" href="#/login">Sign in with the right account</a></div>
+  </div></div>`;
+}
+function view404(){
+  return `<div class="wrap"><div class="empty" style="padding:90px 20px">
+    <div style="font-size:44px">🐟</div><h3>That page swam off</h3>
+    <p>We couldn't find what you were looking for.</p>
+    <div style="margin-top:20px"><a class="btn btn-primary" href="#/shop">Browse the range</a></div>
+  </div></div>`;
+}
+
+/* ------------------------------ HOME ------------------------------ */
+function viewHome(){
+  const featured=DB.products.filter(p=>!p.soon).slice(0,4);
+  const heroArt=art('hero',{hue:198,kind:'fish',seed:4242,w:900,h:760});
+  return `
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <span class="pill" style="background:rgba(95,214,207,.16);color:#8fe6e0">Fresh & frozen · Delivered cold</span>
+        <h1 style="margin-top:16px">Good fish, <em>straight off the hook.</em></h1>
+        <p class="lead">Hake, salmon, gurnard, snoek, klingklip, chokka and more — plus free range eggs and chicken. Ordered in a few taps, delivered through an unbroken cold chain.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="#/shop">Shop the range</a>
+          <a class="btn btn-ghost btn-lg" href="#/track">Track my order</a>
+        </div>
+        <div class="trust">
+          <div><b>Cold chain</b>Boat to door, never broken</div>
+          <div><b>Free delivery</b>On orders over R600</div>
+          <div><b>Secure checkout</b>Card, EFT or cash on delivery</div>
+        </div>
+      </div>
+      <div class="hero-img"><img src="${heroArt}" alt="Fresh fish on ice"></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>Shop by category</h2><p>Everything we currently catch, pack and deliver.</p></div>
+        <a class="btn btn-outline btn-sm" href="#/shop">See everything →</a>
+      </div>
+      <div class="g4">
+        ${[['Fish','fish','🐟',196],['Fresh','fresh','🧊',180],['Eggs','eggs','🥚',38],['Chicken','chicken','🍗',24]]
+          .map(([label,f,emoji,hue])=>`
+          <a class="panel" href="#/shop?f=${f}" style="text-align:center;padding:26px 16px">
+            <div style="width:74px;height:74px;margin:0 auto 14px;border-radius:22px;overflow:hidden">
+              <img src="${art('cat'+f,{hue,kind:f==='eggs'?'eggs':(f==='chicken'?'chicken':'fish'),seed:hue*3,w:200,h:200})}" alt="">
+            </div>
+            <b style="font-size:15px">${label}</b>
+            <div class="small muted" style="margin-top:4px">${DB.products.filter(p=>!p.soon&&(f==='fish'?p.cat==='fish':(f==='fresh'?p.type==='fresh':p.cat===f))).length} products</div>
+          </a>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>Popular right now</h2><p>The packs that leave our cold room fastest.</p></div>
+        <a class="btn btn-outline btn-sm" href="#/shop">All products →</a>
+      </div>
+      <div class="grid">${featured.map(productCard).join('')}</div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="g3">
+        ${[['🧊','Cold chain, end to end','Everything is packed and moved cold — from landing to your door.'],
+           ['📦','Free delivery over R600','Below that it is a flat R65 anywhere in our delivery zone.'],
+           ['🔒','Secure checkout','Card, EFT or cash on delivery. Your details stay yours.']]
+          .map(([i,t,d])=>`<div class="panel"><div style="font-size:28px;margin-bottom:10px">${i}</div>
+            <h3>${t}</h3><p class="small muted" style="margin-top:6px">${d}</p></div>`).join('')}
+      </div>
+    </div>
+  </section>`;
+}
+
+/* ------------------------------ PRODUCT CARD ------------------------------ */
+function productCard(p){
+  const img=art('p'+p.id,{hue:p.hue,kind:p.kind,seed:p.hue*7+3,w:600,h:450});
+  return `<article class="pcard">
+    <a class="pcard-img" href="#/product/${p.id}">
+      <img src="${img}" alt="${esc(p.name)}" loading="lazy">
+      <span class="tag ${p.soon?'soon':''}">${p.soon?'Coming soon':p.type}</span>
+    </a>
+    <div class="pcard-b">
+      <h3><a href="#/product/${p.id}">${esc(p.name)}</a></h3>
+      <p class="pcard-sub">${esc(p.sub)}</p>
+      <div class="pcard-row">
+        <span class="price">${money(p.price)}<small>${esc(p.unit)}</small></span>
+        ${p.soon
+          ? `<button class="btn btn-outline btn-sm" disabled>Soon</button>`
+          : `<button class="btn btn-primary btn-sm" data-act="add" data-id="${p.id}">Add</button>`}
+      </div>
+    </div>
+  </article>`;
+}
+
+/* ------------------------------ SHOP ------------------------------ */
+function viewShop(r){
+  const f=r.q.f||'all';
+  const sort=r.q.sort||'pop';
+  let list=DB.products.slice();
+  if(f==='fresh') list=list.filter(p=>p.type==='fresh');
+  else if(f==='frozen') list=list.filter(p=>p.type==='frozen');
+  else if(f==='eggs') list=list.filter(p=>p.cat==='eggs');
+  else if(f==='chicken') list=list.filter(p=>p.cat==='chicken');
+  else if(f==='fish') list=list.filter(p=>p.cat==='fish');
+  if(sort==='low') list.sort((a,b)=>a.price-b.price);
+  if(sort==='high') list.sort((a,b)=>b.price-a.price);
+  if(sort==='az') list.sort((a,b)=>a.name.localeCompare(b.name));
+
+  const chips=[['all','All products'],['fresh','Fresh'],['frozen','Frozen'],['fish','Fish'],['eggs','Eggs'],['chicken','Chicken']];
+  return `
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>The range</h2><p>${list.length} product${list.length===1?'':'s'} · we're adding more as we grow</p></div>
+        <div class="row">
+          <select class="inp" style="width:auto" data-act="sort">
+            <option value="pop" ${sort==='pop'?'selected':''}>Sort: Popular</option>
+            <option value="low" ${sort==='low'?'selected':''}>Price: low to high</option>
+            <option value="high" ${sort==='high'?'selected':''}>Price: high to low</option>
+            <option value="az" ${sort==='az'?'selected':''}>Name A–Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="filters">
+        ${chips.map(([k,l])=>`<a class="chip ${f===k?'on':''}" href="#/shop?f=${k}&sort=${sort}">${l}</a>`).join('')}
+      </div>
+      ${list.length?`<div class="grid">${list.map(productCard).join('')}</div>`
+        :`<div class="empty"><h3>Nothing here yet</h3><p>Try another filter.</p></div>`}
+    </div>
+  </section>`;
+}
+
+/* ------------------------------ PRODUCT DETAIL ------------------------------ */
+function viewProduct(r){
+  const p=DB.products.find(x=>x.id===r.args[0]);
+  if(!p) return view404();
+  track('view_product',{id:p.id});
+  const img=art('p'+p.id,{hue:p.hue,kind:p.kind,seed:p.hue*7+3,w:900,h:700});
+  const rel=DB.products.filter(x=>x.id!==p.id&&!x.soon&&(x.cat===p.cat||x.type===p.type)).slice(0,4);
+  return `
+  <section class="sec">
+    <div class="wrap">
+      <div class="small muted" style="margin-bottom:16px">
+        <a href="#/">Home</a> / <a href="#/shop">Shop</a> / <span>${esc(p.name)}</span>
+      </div>
+      <div class="split">
+        <div>
+          <div class="panel" style="padding:0;overflow:hidden">
+            <img src="${img}" alt="${esc(p.name)}" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+          </div>
+          <div class="panel" style="margin-top:18px">
+            <h3>About this product</h3>
+            <p class="muted" style="margin-top:8px">${esc(p.desc)}</p>
+          </div>
+        </div>
+        <div>
+          <div class="panel">
+            <span class="pill ${p.soon?'warn':'ok'}">${p.soon?'Coming soon':(p.type==='fresh'?'Fresh':'Frozen')}</span>
+            <h1 style="font-size:30px;font-weight:830;margin-top:12px">${esc(p.name)}</h1>
+            <p class="muted" style="margin-top:6px">${esc(p.sub)}</p>
+            <div class="price" style="font-size:34px;margin:20px 0 4px">${money(p.price)}</div>
+            <div class="small muted">${esc(p.unit)} · incl. VAT</div>
+
+            ${p.soon?`<div class="note warn" style="margin-top:20px">This product is joining the range soon. Check back shortly.</div>`:`
+            <div class="row" style="margin-top:22px">
+              <div class="qty">
+                <button data-act="pd-dec">−</button><span id="pdQty">1</span><button data-act="pd-inc">+</button>
+              </div>
+              <button class="btn btn-primary" style="flex:1" data-act="add-qty" data-id="${p.id}">Add to cart</button>
+            </div>`}
+
+            <div class="note" style="margin-top:20px">
+              <b>Delivery:</b> R65 flat, free over R600. Cold chain, door to door.
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Good to know</h3>
+            <ul style="margin-top:10px;display:flex;flex-direction:column;gap:10px">
+              ${['Packed and moved cold from landing to your door.',
+                 'Secure checkout — card, EFT or cash on delivery.',
+                 'Every order gets a tracking number you can check any time.']
+                .map(t=>`<li class="small muted" style="display:flex;gap:9px"><span style="color:var(--teal)">✓</span><span>${t}</span></li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      ${rel.length?`<div class="sec-head" style="margin-top:50px"><div><h2>You might also like</h2></div></div>
+      <div class="grid">${rel.map(productCard).join('')}</div>`:''}
+    </div>
+  </section>`;
+}
+
+/* ------------------------------ CART ------------------------------ */
+function viewCart(){
+  const lines=cartLines();
+  if(!lines.length){
+    return `<div class="wrap"><div class="empty" style="padding:80px 20px">
+      <div style="font-size:44px">🛒</div><h3>Your cart is empty</h3>
+      <p>Have a look at the range — fresh, frozen, eggs and chicken.</p>
+      <div style="margin-top:20px"><a class="btn btn-primary" href="#/shop">Shop the range</a></div>
+    </div></div>`;
+  }
+  const sub=cartSub(), del=cartDelivery(), total=sub+del;
+  return `
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><div><h2>Your cart</h2><p>${cartCount()} item${cartCount()===1?'':'s'}</p></div></div>
+      <div class="split">
+        <div class="panel">
+          ${lines.map(l=>`
+            <div class="citem">
+              <img src="${art('p'+l.id,{hue:l.hue,kind:l.kind,seed:l.hue*7+3,w:300,h:240})}" alt="">
+              <div>
+                <b style="font-size:15px"><a href="#/product/${l.id}">${esc(l.name)}</a></b>
+                <div class="small muted">${esc(l.unit)} · ${money(l.price)} each</div>
+                <div class="c-actions">
+                  <div class="qty" style="margin-top:8px">
+                    <button data-act="q-dec" data-id="${l.id}">−</button>
+                    <span>${l.qty}</span>
+                    <button data-act="q-inc" data-id="${l.id}">+</button>
+                  </div>
+                </div>
+              </div>
+              <div style="text-align:right">
+                <b style="font-size:16px">${money(l.price*l.qty)}</b>
+                <div><button class="small" style="color:var(--danger);margin-top:6px;font-weight:650" data-act="remove" data-id="${l.id}">Remove</button></div>
+              </div>
+            </div>`).join('')}
+        </div>
+        <div class="panel">
+          <h3>Order summary</h3>
+          <div style="margin-top:14px">
+            <div class="sum-row"><span>Subtotal</span><b>${money(sub)}</b></div>
+            <div class="sum-row"><span>Delivery</span><b>${del===0?'Free':money(del)}</b></div>
+            ${del===0?'':`<div class="small muted">Add ${money(600-sub)} more for free delivery.</div>`}
+            <div class="sum-row total"><span>Total</span><span>${money(total)}</span></div>
+          </div>
+          <a class="btn btn-primary btn-lg" style="width:100%;margin-top:20px" href="#/checkout">Proceed to checkout</a>
+          <a class="btn btn-outline" style="width:100%;margin-top:10px" href="#/shop">Keep shopping</a>
+          <div class="note" style="margin-top:18px">Secure checkout. We never store your card details.</div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+/* ------------------------------ CHECKOUT ------------------------------ */
+function viewCheckout(){
+  const lines=cartLines();
+  if(!lines.length) return viewCart();
+  track('checkout_start');
+  const sub=cartSub(), del=cartDelivery(), total=sub+del;
+  const u=state.user||{};
+  return `
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><div><h2>Checkout</h2><p>${cartCount()} item${cartCount()===1?'':'s'} · secure payment</p></div></div>
+      <form id="coForm" class="split">
+        <div>
+          <div class="panel">
+            <h3>Delivery details</h3>
+            <div class="g2" style="margin-top:16px">
+              <div><label class="fl">Full name</label><input class="inp" name="name" required value="${esc(u.name||'')}"></div>
+              <div><label class="fl">Email</label><input class="inp" type="email" name="email" required value="${esc(u.email||'')}"></div>
+              <div><label class="fl">Phone</label><input class="inp" name="phone" required value="${esc(u.phone||'')}"></div>
+              <div><label class="fl">Postal code</label><input class="inp" name="postal" required value="${esc(u.postal||'')}"></div>
+              <div style="grid-column:1/-1"><label class="fl">Street address</label><input class="inp" name="address" required value="${esc(u.address||'')}"></div>
+              <div><label class="fl">City</label><input class="inp" name="city" required value="${esc(u.city||'')}"></div>
+              <div><label class="fl">Delivery notes (optional)</label><input class="inp" name="notes" placeholder="Gate code, etc."></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Payment method</h3>
+            <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px">
+              ${[['Card','Visa, Mastercard — instant confirmation'],
+                 ['EFT','Bank transfer — order ships once funds clear'],
+                 ['Cash on delivery','Pay the driver when it arrives']]
+                .map(([v,d],i)=>`
+                <label style="display:flex;gap:12px;align-items:flex-start;padding:14px;border:1px solid var(--line);border-radius:12px;cursor:pointer">
+                  <input type="radio" name="payment" value="${v}" ${i===0?'checked':''} style="margin-top:4px">
+                  <span><b style="font-size:14px">${v}</b><div class="small muted">${d}</div></span>
+                </label>`).join('')}
+            </div>
+          </div>
+
+          <div class="note ok" style="margin-top:18px">
+            🔒 This is a demo checkout. No real payment is processed and no card details are stored.
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Your order</h3>
+          <div style="margin-top:14px">
+            ${lines.map(l=>`<div class="sum-row"><span>${esc(l.name)} × ${l.qty}</span><b>${money(l.price*l.qty)}</b></div>`).join('')}
+            <div class="sum-row" style="border-top:1px solid var(--line);margin-top:8px;padding-top:12px"><span>Subtotal</span><b>${money(sub)}</b></div>
+            <div class="sum-row"><span>Delivery</span><b>${del===0?'Free':money(del)}</b></div>
+            <div class="sum-row total"><span>Total</span><span>${money(total)}</span></div>
+          </div>
+          <button class="btn btn-primary btn-lg" style="width:100%;margin-top:20px" type="submit">Place order · ${money(total)}</button>
+          <div class="small muted center" style="margin-top:12px">You'll get an order number to track immediately.</div>
+        </div>
+      </form>
+    </div>
+  </section>`;
+}
+
+/* ------------------------------ ORDER CONFIRMATION / DETAIL ------------------------------ */
+function viewOrder(r){
+  const o=DB.orders.find(x=>x.id===r.args[0]);
+  if(!o) return view404();
+  if(state.user && state.user.role==='client' && o.userId!==state.user.id && o.email!==state.user.email) return viewDenied('user');
+  const idx=STATUSES.indexOf(o.status);
+  return `
+  <section class="sec">
+    <div class="wrap">
+      <div class="panel" style="text-align:center;padding:34px">
+        <div style="font-size:44px">${o.status==='Delivered'?'✅':'🚚'}</div>
+        <h2 style="font-size:26px;margin-top:10px">Order ${esc(o.id)}</h2>
+        <p class="muted" style="margin-top:6px">Placed ${fmtDT(o.created)} · ${esc(o.payment)}</p>
+        <div style="margin-top:16px"><span class="pill ${o.status==='Delivered'?'ok':'info'}">${esc(o.status)}</span></div>
+      </div>
+
+      <div class="split" style="margin-top:22px">
+        <div>
+          <div class="panel">
+            <h3>Tracking</h3>
+            <ul class="timeline" style="margin-top:18px">
+              ${STATUSES.map((s,i)=>{
+                const h=o.history.find(x=>x.status===s);
+                const cls=i<idx?'done':(i===idx?'done cur':'');
+                return `<li class="${cls}"><span class="dot"></span>
+                  <b>${s}</b><small>${h?fmtDT(h.t):'Pending'}</small></li>`;
+              }).join('')}
+            </ul>
+            ${o.status==='Cancelled'?`<div class="note warn" style="margin-top:16px">This order was cancelled.</div>`:''}
+          </div>
+
+          <div class="panel">
+            <h3>Items</h3>
+            <div style="margin-top:12px">
+              ${o.items.map(i=>`<div class="sum-row"><span>${esc(i.name)} × ${i.qty}</span><b>${money(i.price*i.qty)}</b></div>`).join('')}
+              <div class="sum-row" style="border-top:1px solid var(--line);margin-top:8px;padding-top:12px"><span>Subtotal</span><b>${money(o.sub)}</b></div>
+              <div class="sum-row"><span>Delivery</span><b>${o.delivery===0?'Free':money(o.delivery)}</b></div>
+              <div class="sum-row total"><span>Total</span><span>${money(o.total)}</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel">
+            <h3>Delivering to</h3>
+            <p class="small" style="margin-top:10px;line-height:1.7">
+              <b>${esc(o.name)}</b><br>${esc(o.address)}<br>${esc(o.city)}, ${esc(o.postal)}<br>${esc(o.phone)}<br>${esc(o.email)}
+            </p>
+          </div>
+          <div class="panel">
+            <h3>Need help?</h3>
+            <p class="small muted" style="margin-top:8px">Quote order number <b>${esc(o.id)}</b>.</p>
+            <a class="btn btn-outline btn-sm" style="margin-top:14px" href="#/shop">Continue shopping</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+/* ------------------------------ TRACK ------------------------------ */
+function viewTrack(){
+  return `
+  <section class="sec">
+    <div class="wrap" style="max-width:640px">
+      <div class="panel">
+        <h2 style="font-size:24px">Track your order</h2>
+        <p class="muted" style="margin-top:6px">Enter your order number and we'll show you exactly where it is.</p>
+        <form id="trackForm" style="margin-top:22px">
+          <label class="fl">Order number</label>
+          <input class="inp" name="order" placeholder="e.g. OTH-100345" required>
+          <label class="fl" style="margin-top:14px">Email (optional)</label>
+          <input class="inp" name="email" type="email" placeholder="you@example.com">
+          <button class="btn btn-primary" style="width:100%;margin-top:18px" type="submit">Track order</button>
+        </form>
+        <div id="trackResult" style="margin-top:18px"></div>
+      </div>
+      <div class="note" style="margin-top:18px">
+        Don't have your number? It's in your order confirmation and in your account dashboard.
+      </div>
+    </div>
+  </section>`;
+}
+
+/* ------------------------------ AUTH ------------------------------ */
+function viewLogin(){
+  return `
+  <section class="sec">
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <div style="display:flex;justify-content:center;margin-bottom:16px">${logoSVG(52)}</div>
+        <h2 class="center">Sign in</h2>
+        <p class="muted center small" style="margin-top:6px">Customers, admin and owner accounts</p>
+
+        <div class="tabs" style="justify-content:center;margin-top:22px">
+          <button class="tab on" data-act="auth-tab" data-tab="login">Sign in</button>
+          <button class="tab" data-act="auth-tab" data-tab="register">Create account</button>
+        </div>
+
+        <form id="loginForm">
+          <label class="fl">Email</label>
+          <input class="inp" type="email" name="email" required placeholder="you@example.com">
+          <label class="fl" style="margin-top:14px">Password</label>
+          <input class="inp" type="password" name="pw" required placeholder="••••••••">
+          <button class="btn btn-primary" style="width:100%;margin-top:20px" type="submit">Sign in</button>
+        </form>
+
+        <form id="regForm" class="hide">
+          <label class="fl">Full name</label>
+          <input class="inp" name="name" required>
+          <label class="fl" style="margin-top:14px">Email</label>
+          <input class="inp" type="email" name="email" required>
+          <label class="fl" style="margin-top:14px">Password</label>
+          <input class="inp" type="password" name="pw" required minlength="6">
+          <button class="btn btn-primary" style="width:100%;margin-top:20px" type="submit">Create account</button>
+        </form>
+
+        <div class="note" style="margin-top:22px">
+          <b>Demo accounts</b><br>
+          Client — client@offthehook.co.za / client123<br>
+          Admin — admin@offthehook.co.za / admin123<br>
+          Owner — owner@offthehook.co.za / owner123
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+/* ------------------------------ CLIENT ACCOUNT ------------------------------ */
+function viewAccount(){
+  const u=state.user;
+  const mine=DB.orders.filter(o=>o.userId===u.id||o.email===u.email);
+  return `
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>My account</h2><p>${esc(u.name)} · ${esc(u.email)}</p></div>
+        <button class="btn btn-outline btn-sm" data-act="logout">Sign out</button>
+      </div>
+
+      <div class="g3" style="margin-bottom:22px">
+        <div class="kpi accent"><div class="k">Orders</div><div class="v">${mine.length}</div><div class="d">Lifetime</div></div>
+        <div class="kpi"><div class="k">Spent</div><div class="v">${money(mine.reduce((a,o)=>a+o.total,0))}</div><div class="d">Incl. delivery</div></div>
+        <div class="kpi"><div class="k">In transit</div><div class="v">${mine.filter(o=>o.status!=='Delivered'&&o.status!=='Cancelled').length}</div><div class="d">On the way to you</div></div>
+      </div>
+
+      <div class="panel">
+        <div class="ph"><h3>My orders</h3><a class="btn btn-outline btn-sm" href="#/shop">Shop again</a></div>
+        ${mine.length?`
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Order</th><th>Date</th><th>Items</th><th>Total</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            ${mine.map(o=>`<tr>
+              <td><b>${esc(o.id)}</b></td>
+              <td>${fmtDate(o.created)}</td>
+              <td>${o.items.reduce((a,i)=>a+i.qty,0)}</td>
+              <td><b>${money(o.total)}</b></td>
+              <td><span class="pill ${o.status==='Delivered'?'ok':(o.status==='Cancelled'?'danger':'info')}">${esc(o.status)}</span></td>
+              <td><a class="btn btn-outline btn-sm" href="#/order/${o.id}">Track</a></td>
+            </tr>`).join('')}
+          </tbody>
+        </table></div>`:`<div class="empty"><h3>No orders yet</h3><p>Your first order will show up here.</p></div>`}
+      </div>
+
+      <div class="panel">
+        <h3>Delivery details</h3>
+        <p class="small muted" style="margin-top:8px">
+          ${esc(u.address||'No address saved')}${u.city?', '+esc(u.city):''}${u.postal?' '+esc(u.postal):''}<br>
+          ${esc(u.phone||'No phone saved')}
+        </p>
+      </div>
+    </div>
+  </section>`;
+}
+
+/* =====================================================================
+   DASHBOARD SHARED PIECES
+   ===================================================================== */
+function funnelHTML(a){
+  const steps=[
+    ['Landing views',a.total],['Product views',a.productViews],
+    ['Added to cart',a.adds],['Checkout started',a.checkouts],['Purchases',a.converted]
+  ];
+  const top=Math.max(a.total,1);
+  return `<div class="funnel">${steps.map(([l,v])=>`
+    <div class="fn-row">
+      <span class="muted">${l}</span>
+      <div class="fn-track"><div class="fn-fill" style="width:${clamp(v/top*100,0.8,100).toFixed(1)}%"></div></div>
+      <span class="fn-val">${v}</span>
+    </div>`).join('')}</div>`;
+}
+function sourceTable(a){
+  const rows=Object.entries(a.bySource).sort((x,y)=>y[1].sessions-x[1].sessions);
+  const total=rows.reduce((s,r)=>s+r[1].sessions,0)||1;
+  return `<div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Source</th><th>Sessions</th><th>Share</th><th>Conversions</th><th>Conv. rate</th><th>Bounce</th></tr></thead>
+    <tbody>${rows.map(([k,v])=>`<tr>
+      <td><b>${esc(k)}</b></td>
+      <td>${v.sessions}</td>
+      <td>${pctS(v.sessions,total)}</td>
+      <td>${v.converted}</td>
+      <td><b style="color:${v.converted/v.sessions>0.05?'var(--ok)':'inherit'}">${pctS(v.converted,v.sessions)}</b></td>
+      <td>${pctS(v.bounced,v.sessions)}</td>
+    </tr>`).join('')}</tbody>
+  </table></div>`;
+}
+function campaignTable(a,manage){
+  const keys=Object.keys(a.byCampaign);
+  if(!keys.length) return `<div class="empty"><h3>No campaign traffic yet</h3><p>Publish a landing page in the Marketing Studio to start tracking.</p></div>`;
+  return `<div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Campaign</th><th>Landing views</th><th>Sessions</th><th>Add to cart</th><th>Orders</th><th>Conv. rate</th><th>Bounce</th>${manage?'<th></th>':''}</tr></thead>
+    <tbody>${keys.sort((x,y)=>a.byCampaign[y].sessions-a.byCampaign[x].sessions).map(k=>{
+      const v=a.byCampaign[k];
+      const c=DB.campaigns.find(x=>x.slug===k);
+      return `<tr>
+        <td><b>${esc(k)}</b>${c?`<div class="small muted">${esc(c.productName)}</div>`:''}</td>
+        <td>${v.views}</td>
+        <td>${v.sessions}</td>
+        <td>${v.adds}</td>
+        <td>${v.converted}</td>
+        <td><b style="color:${v.converted/v.sessions>0.05?'var(--ok)':'inherit'}">${pctS(v.converted,v.sessions)}</b></td>
+        <td>${pctS(v.bounced,v.sessions)}</td>
+        ${manage?`<td>${c?`<a class="btn btn-outline btn-sm" href="#/l/${c.slug}?src=instagram&c=${c.slug}" target="_self">View LP</a>`:''}</td>`:''}
+      </tr>`;
+    }).join('')}</tbody>
+  </table></div>`;
+}
+function kpiRow(a,owner){
+  return `<div class="g4" style="margin-bottom:20px">
+    <div class="kpi accent"><div class="k">Revenue</div><div class="v">${money(a.revenue)}</div><div class="d">${a.orders} orders · AOV ${money(a.aov)}</div></div>
+    <div class="kpi"><div class="k">Conversion rate</div><div class="v">${a.convRate.toFixed(1)}%</div><div class="d">${a.converted} of ${a.total} sessions</div></div>
+    <div class="kpi"><div class="k">Bounce rate</div><div class="v">${a.bounceRate.toFixed(1)}%</div><div class="d">${a.bounced} single-page sessions</div></div>
+    <div class="kpi"><div class="k">Sessions</div><div class="v">${a.total}</div><div class="d">${a.pv} page views · ${(a.pv/Math.max(a.total,1)).toFixed(1)} pp/session</div></div>
+  </div>`;
+}
+function ordersTable(orders,editable){
+  if(!orders.length) return `<div class="empty"><h3>No orders yet</h3></div>`;
+  return `<div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Order</th><th>Customer</th><th>Date</th><th>Total</th><th>Payment</th><th>Status</th><th></th></tr></thead>
+    <tbody>${orders.map(o=>`<tr>
+      <td><b>${esc(o.id)}</b></td>
+      <td>${esc(o.name)}<div class="small muted">${esc(o.email)}</div></td>
+      <td>${fmtDate(o.created)}</td>
+      <td><b>${money(o.total)}</b></td>
+      <td>${esc(o.payment)}</td>
+      <td>${editable
+        ? `<select class="inp" style="width:auto;padding:7px 10px;font-size:13px" data-act="set-status" data-id="${o.id}">
+             ${STATUSES.concat(['Cancelled']).map(s=>`<option ${o.status===s?'selected':''}>${s}</option>`).join('')}
+           </select>`
+        : `<span class="pill ${o.status==='Delivered'?'ok':(o.status==='Cancelled'?'danger':'info')}">${esc(o.status)}</span>`}
+      </td>
+      <td><a class="btn btn-outline btn-sm" href="#/order/${o.id}">View</a></td>
+    </tr>`).join('')}</tbody>
+  </table></div>`;
+}
+function productManager(){
+  return `<div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th><th></th></tr></thead>
+    <tbody>${DB.products.map(p=>`<tr>
+      <td><b>${esc(p.name)}</b><div class="small muted">${esc(p.sub)}</div></td>
+      <td>${esc(p.cat)} · ${esc(p.type)}</td>
+      <td><input class="inp" style="width:100px;padding:7px 10px" type="number" step="0.01" value="${p.price}" data-act="set-price" data-id="${p.id}"></td>
+      <td><input class="inp" style="width:80px;padding:7px 10px" type="number" value="${p.stock||0}" data-act="set-stock" data-id="${p.id}"></td>
+      <td>${p.soon?'<span class="pill warn">Soon</span>':(p.stock>0?'<span class="pill ok">In stock</span>':'<span class="pill danger">Out</span>')}</td>
+      <td><button class="btn btn-outline btn-sm" data-act="toggle-soon" data-id="${p.id}">${p.soon?'Launch':'Mark soon'}</button></td>
+    </tr>`).join('')}</tbody>
+  </table></div>`;
+}
+
+/* ------------------------------ MARKETING STUDIO ------------------------------ */
+function studioHTML(){
+  const s=state.studio;
+  return `
+  <div class="split">
+    <div>
+      <div class="panel">
+        <h3>AI content creator</h3>
+        <p class="small muted" style="margin-top:6px">Generate ad creative, copy, image prompts and a matching landing page — all in one go.</p>
+        <form id="studioForm" style="margin-top:18px">
+          <div class="g2">
+            <div><label class="fl">Product</label>
+              <select class="inp" name="productId">
+                ${DB.products.map(p=>`<option value="${p.id}">${esc(p.name)} — ${esc(p.unit)}</option>`).join('')}
+              </select></div>
+            <div><label class="fl">Platform</label>
+              <select class="inp" name="platform">
+                ${['Instagram','Facebook','TikTok','Pinterest','Google','In-store'].map(x=>`<option>${x}</option>`).join('')}
+              </select></div>
+            <div><label class="fl">Angle</label>
+              <select class="inp" name="angle">
+                ${Object.entries(ANGLES).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('')}
+              </select></div>
+            <div><label class="fl">Tone</label>
+              <select class="inp" name="tone">
+                ${Object.entries(TONES).map(([k,v])=>`<option value="${k}" ${k==='straight'?'selected':''}>${v.label}</option>`).join('')}
+              </select></div>
+            <div><label class="fl">Format</label>
+              <select class="inp" name="format">
+                ${['Static post','Story / Reel','Carousel','Landing page','Banner set'].map(x=>`<option>${x}</option>`).join('')}
+              </select></div>
+            <div><label class="fl">Creative seed</label>
+              <input class="inp" name="seed" placeholder="optional — for a specific variant"></div>
+          </div>
+          <div class="row" style="margin-top:18px">
+            <button class="btn btn-primary" type="submit">✨ Generate creative</button>
+            ${s?`<button class="btn btn-outline" type="button" data-act="variant">🔁 New variant</button>`:''}
+          </div>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h3>Guardrails</h3>
+        <p class="small muted" style="margin-top:6px">The generator is locked to honest, pull-only marketing. It will never produce:</p>
+        <div class="row" style="margin-top:12px;gap:8px">
+          ${['False claims','Clickbait','False urgency','Cold calls','Cold emails','DMs','Pop-ups','Countdowns','Email capture walls']
+            .map(x=>`<span class="pill neutral">${x}</span>`).join('')}
+        </div>
+        <div class="note ok" style="margin-top:14px">
+          Every generated asset is scanned against a compliance word list before it is shown.
+        </div>
+      </div>
+
+      ${s?`
+      <div class="panel">
+        <div class="ph"><h3>Generated copy</h3>
+          <div class="row">
+            <button class="btn btn-teal btn-sm" data-act="publish">${s.published?'Published ✓':'Publish landing page'}</button>
+            <button class="btn btn-outline btn-sm" data-act="copy-slug">Copy link</button>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div><label class="fl">Headline</label><div class="note">${esc(s.headline)}</div></div>
+          <div><label class="fl">Primary text</label><div class="note">${esc(s.body)}</div></div>
+          <div><label class="fl">Call to action</label><div class="note">${esc(s.cta)}</div></div>
+          <div><label class="fl">Hashtags</label><div class="note">${esc(s.hashtags.join(' '))}</div></div>
+          <div><label class="fl">Image prompt (for your image model)</label><div class="note" style="font-family:ui-monospace,Menlo,monospace;font-size:12px">${esc(s.imagePrompt)}</div></div>
+          <div><label class="fl">Landing page</label>
+            <div class="note">offthehook.co.za/#/l/${esc(s.slug)}</div>
+            <div class="small muted" style="margin-top:6px">Live preview: <a href="#/l/${s.slug}?src=studio&c=${s.slug}" style="color:var(--teal);font-weight:650">open landing page →</a></div>
+          </div>
+          <div>
+            <label class="fl">Compliance check</label>
+            ${(()=>{const f=checkCompliance(s.headline+' '+s.body+' '+s.cta);
+              return f.length?`<div class="note warn">Flagged terms: ${f.map(esc).join(', ')} — edit before publishing.</div>`
+                :`<div class="note ok">✓ Passed — no banned claims, urgency or clickbait terms found.</div>`;})()}
+          </div>
+        </div>
+      </div>`:''}
+    </div>
+
+    <div>
+      ${s?`
+      <div class="panel">
+        <h3>Ad preview</h3>
+        <p class="small muted" style="margin-top:4px;margin-bottom:14px">${esc(s.platform)} · ${esc(s.format)}</p>
+        <div class="ad">
+          <div class="ad-top">${logoSVG(34)}<div><b>Off the Hook</b><small>Sponsored · ${esc(s.platform)}</small></div></div>
+          <img src="${s.art}" alt="Ad creative">
+          <div class="ad-body">
+            <b>${esc(s.headline)}</b>
+            <p>${esc(s.body)}</p>
+            <p class="ad-tags">${esc(s.hashtags.slice(0,4).join(' '))}</p>
+          </div>
+          <div class="ad-foot">
+            <span>offthehook.co.za/#/l/${esc(s.slug)}</span>
+            <a class="btn btn-primary btn-sm" href="#/l/${s.slug}?src=${encodeURIComponent(s.platform.toLowerCase())}&c=${s.slug}">${esc(s.cta)}</a>
+          </div>
+        </div>
+      </div>`:`
+      <div class="panel">
+        <div class="empty"><div style="font-size:38px">🎨</div>
+          <h3>Nothing generated yet</h3>
+          <p>Fill in the form and hit generate — you'll see the ad preview here.</p></div>
+      </div>`}
+
+      <div class="panel">
+        <h3>How the pull engine works</h3>
+        <ol style="margin-top:12px;display:flex;flex-direction:column;gap:10px;font-size:13.5px;color:#42606c">
+          <li><b>1.</b> Generate honest creative for a product.</li>
+          <li><b>2.</b> Publish the matching landing page — one product, one message, one action.</li>
+          <li><b>3.</b> Post the creative wherever your audience already is.</li>
+          <li><b>4.</b> People who are interested click through. Nobody is chased.</li>
+          <li><b>5.</b> Every session, bounce and conversion is attributed back to the campaign.</li>
+        </ol>
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ------------------------------ ADMIN DASHBOARD ------------------------------ */
+function viewAdmin(r){
+  const tab=r.q.tab||'overview';
+  const a=computeAnalytics();
+  const series=dailySeries(14);
+  const tabs=[['overview','Overview'],['orders','Orders'],['products','Products'],['studio','Marketing Studio'],['campaigns','Campaigns']];
+
+  return `
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>Admin dashboard</h2><p>Signed in as ${esc(state.user.name)} · operations &amp; growth</p></div>
+        <div class="row"><span class="pill purple">Admin</span>
+          <button class="btn btn-outline btn-sm" data-act="logout">Sign out</button></div>
+      </div>
+
+      <div class="tabs">
+        ${tabs.map(([k,l])=>`<a class="tab ${tab===k?'on':''}" href="#/admin?tab=${k}">${l}</a>`).join('')}
+      </div>
+
+      ${tab==='overview'?`
+        ${kpiRow(a)}
+        <div class="split">
+          <div class="panel">
+            <div class="ph"><h3>Sessions — last 14 days</h3><span class="pill info">${series.reduce((s,d)=>s+d.sessions,0)} sessions</span></div>
+            ${barChart(series,'sessions')}
+          </div>
+          <div class="panel">
+            <div class="ph"><h3>Orders — last 14 days</h3><span class="pill ok">${series.reduce((s,d)=>s+d.orders,0)} orders</span></div>
+            ${barChart(series,'orders')}
+          </div>
+        </div>
+        <div class="split" style="margin-top:18px">
+          <div class="panel"><h3>Conversion funnel</h3>
+            <p class="small muted" style="margin-top:4px;margin-bottom:18px">Landing view → purchase</p>
+            ${funnelHTML(a)}</div>
+          <div class="panel"><h3>Traffic sources</h3>
+            <div style="margin-top:14px">${sourceTable(a)}</div></div>
+        </div>
+        <div class="panel" style="margin-top:18px">
+          <h3>Campaign performance</h3>
+          <div style="margin-top:14px">${campaignTable(a,true)}</div>
+        </div>
+      `:''}
+
+      ${tab==='orders'?`
+        <div class="panel">
+          <div class="ph"><h3>All orders</h3><span class="pill neutral">${DB.orders.length} total</span></div>
+          ${ordersTable(DB.orders,true)}
+        </div>
+      `:''}
+
+      ${tab==='products'?`
+        <div class="panel">
+          <div class="ph"><h3>Products</h3>
+            <button class="btn btn-outline btn-sm" data-act="new-product">+ Add product</button></div>
+          ${productManager()}
+        </div>
+      `:''}
+
+      ${tab==='studio'?studioHTML():''}
+
+      ${tab==='campaigns'?`
+        <div class="panel">
+          <div class="ph"><h3>Campaign library</h3><a class="btn btn-teal btn-sm" href="#/admin?tab=studio">+ New campaign</a></div>
+          ${DB.campaigns.length?`<div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Campaign</th><th>Product</th><th>Platform</th><th>Angle</th><th>Status</th><th>Created</th><th></th></tr></thead>
+            <tbody>${DB.campaigns.map(c=>`<tr>
+              <td><b>${esc(c.slug)}</b><div class="small muted">${esc(c.headline)}</div></td>
+              <td>${esc(c.productName)}</td>
+              <td>${esc(c.platform)}</td>
+              <td>${esc((ANGLES[c.angle]||{label:c.angle}).label)}</td>
+              <td>${c.published?'<span class="pill ok">Live</span>':'<span class="pill neutral">Draft</span>'}</td>
+              <td>${fmtDate(c.createdAt)}</td>
+              <td class="row">
+                <a class="btn btn-outline btn-sm" href="#/l/${c.slug}?src=admin&c=${c.slug}">Landing page</a>
+                <button class="btn btn-outline btn-sm" data-act="toggle-pub" data-id="${c.id}">${c.published?'Unpublish':'Publish'}</button>
+              </td>
+            </tr>`).join('')}</tbody>
+          </table></div>`:`<div class="empty"><h3>No campaigns yet</h3><p>Head to the Marketing Studio to generate your first one.</p></div>`}
+        </div>
+      `:''}
+    </div>
+  </section>`;
+}
+
+/* ------------------------------ OWNER DASHBOARD ------------------------------ */
+function viewOwner(r){
+  const tab=r.q.tab||'overview';
+  const a=computeAnalytics();
+  const series=dailySeries(14);
+  const tabs=[['overview','Overview'],['analytics','Marketing analytics'],['orders','All orders'],
+              ['users','Users & roles'],['products','Products'],['studio','Marketing Studio'],['log','Activity log']];
+
+  const revenueByProduct={};
+  DB.orders.filter(o=>o.status!=='Cancelled').forEach(o=>o.items.forEach(i=>{
+    revenueByProduct[i.name]=revenueByProduct[i.name]||{qty:0,rev:0};
+    revenueByProduct[i.name].qty+=i.qty; revenueByProduct[i.name].rev+=i.price*i.qty;
+  }));
+  const rb=Object.entries(revenueByProduct).sort((x,y)=>y[1].rev-x[1].rev);
+
+  return `
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>Owner dashboard</h2><p>${esc(state.user.name)} · full visibility across the business</p></div>
+        <div class="row"><span class="pill purple">Owner</span>
+          <span class="pill ok">Full access</span>
+          <button class="btn btn-outline btn-sm" data-act="logout">Sign out</button></div>
+      </div>
+
+      <div class="tabs">
+        ${tabs.map(([k,l])=>`<a class="tab ${tab===k?'on':''}" href="#/owner?tab=${k}">${l}</a>`).join('')}
+      </div>
+
+      ${tab==='overview'?`
+        ${kpiRow(a,true)}
+        <div class="g4" style="margin-bottom:20px">
+          <div class="kpi"><div class="k">Customers</div><div class="v">${DB.users.filter(u=>u.role==='client').length}</div><div class="d">Registered accounts</div></div>
+          <div class="kpi"><div class="k">Products live</div><div class="v">${DB.products.filter(p=>!p.soon).length}</div><div class="d">${DB.products.filter(p=>p.soon).length} coming soon</div></div>
+          <div class="kpi"><div class="k">Campaigns</div><div class="v">${DB.campaigns.length}</div><div class="d">${DB.campaigns.filter(c=>c.published).length} live landing pages</div></div>
+          <div class="kpi"><div class="k">Avg. order value</div><div class="v">${money(a.aov)}</div><div class="d">Across ${a.orders} orders</div></div>
+        </div>
+        <div class="split">
+          <div class="panel"><h3>Revenue — last 14 days</h3>${barChart(series,'revenue')}</div>
+          <div class="panel"><h3>Revenue by product</h3>
+            <div class="tbl-wrap" style="margin-top:10px"><table class="tbl">
+              <thead><tr><th>Product</th><th>Units</th><th>Revenue</th></tr></thead>
+              <tbody>${rb.map(([n,v])=>`<tr><td>${esc(n)}</td><td>${v.qty}</td><td><b>${money(v.rev)}</b></td></tr>`).join('')}</tbody>
+            </table></div>
+          </div>
+        </div>
+      `:''}
+
+      ${tab==='analytics'?`
+        ${kpiRow(a,true)}
+        <div class="split">
+          <div class="panel"><h3>Conversion funnel</h3>
+            <p class="small muted" style="margin-top:4px;margin-bottom:18px">Every stage, all traffic</p>
+            ${funnelHTML(a)}</div>
+          <div class="panel"><h3>Traffic sources</h3><div style="margin-top:14px">${sourceTable(a)}</div></div>
+        </div>
+        <div class="panel" style="margin-top:18px">
+          <div class="ph"><h3>Campaign attribution</h3>
+            <span class="pill ${a.convRate>4?'ok':'warn'}">Site conversion ${a.convRate.toFixed(1)}%</span></div>
+          ${campaignTable(a,true)}
+        </div>
+        <div class="panel" style="margin-top:18px">
+          <h3>Bounce rate definition</h3>
+          <p class="small muted" style="margin-top:6px">
+            A session counts as a bounce when it contains a single page view and zero interactions
+            (no product view, no add-to-cart, no checkout start). Site-wide bounce is
+            <b>${a.bounceRate.toFixed(1)}%</b> across ${a.total} sessions.
+          </p>
+        </div>
+      `:''}
+
+      ${tab==='orders'?`
+        <div class="panel"><div class="ph"><h3>All orders — every account</h3>
+          <span class="pill neutral">${money(DB.orders.filter(o=>o.status!=='Cancelled').reduce((s,o)=>s+o.total,0))} lifetime</span></div>
+          ${ordersTable(DB.orders,true)}</div>
+      `:''}
+
+      ${tab==='users'?`
+        <div class="panel"><h3>Users &amp; roles</h3>
+          <p class="small muted" style="margin-top:4px;margin-bottom:14px">Only the owner can see or change roles.</p>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Orders</th><th>Joined</th><th>Change role</th></tr></thead>
+            <tbody>${DB.users.map(u=>{
+              const oc=DB.orders.filter(o=>o.userId===u.id||o.email===u.email).length;
+              return `<tr>
+                <td><b>${esc(u.name)}</b></td>
+                <td>${esc(u.email)}</td>
+                <td><span class="pill ${u.role==='owner'?'purple':(u.role==='admin'?'info':'neutral')}">${esc(u.role)}</span></td>
+                <td>${oc}</td>
+                <td>${fmtDate(u.created)}</td>
+                <td>${u.role==='owner'?'<span class="small muted">—</span>':
+                  `<select class="inp" style="width:auto;padding:7px 10px;font-size:13px" data-act="set-role" data-id="${u.id}">
+                    ${['client','admin'].map(r2=>`<option ${u.role===r2?'selected':''}>${r2}</option>`).join('')}
+                  </select>`}</td>
+              </tr>`;}).join('')}</tbody>
+          </table></div>
+        </div>
+      `:''}
+
+      ${tab==='products'?`
+        <div class="panel"><div class="ph"><h3>Product catalogue</h3>
+          <button class="btn btn-outline btn-sm" data-act="new-product">+ Add product</button></div>
+          ${productManager()}</div>
+      `:''}
+
+      ${tab==='studio'?studioHTML():''}
+
+      ${tab==='log'?`
+        <div class="panel"><h3>Activity log</h3>
+          ${DB.log.length?`<div class="tbl-wrap" style="margin-top:12px"><table class="tbl">
+            <thead><tr><th>When</th><th>Who</th><th>Action</th></tr></thead>
+            <tbody>${DB.log.map(l=>`<tr><td>${fmtDT(l.t)}</td><td>${esc(l.who)}</td><td>${esc(l.what)}</td></tr>`).join('')}</tbody>
+          </table></div>`:`<div class="empty"><h3>Nothing logged yet</h3></div>`}
+        </div>
+      `:''}
+    </div>
+  </section>`;
+}
+
+/* ------------------------------ CAMPAIGN LANDING PAGE ------------------------------ */
+function viewLanding(r){
+  const slug=r.args[0];
+  const c=DB.campaigns.find(x=>x.slug===slug);
+  if(!c || !c.published) return view404();
+  const p=DB.products.find(x=>x.id===c.productId)||DB.products[0];
+  track('campaign_view',{slug});
+  const R=Math.random;
+  return `
+  <section class="sec">
+    <div class="wrap">
+      <div class="lp-hero">
+        <div class="lp-copy">
+          <span class="pill" style="background:rgba(95,214,207,.18);color:#8fe6e0">${esc(p.type)} · ${esc(p.unit)}</span>
+          <h1 style="margin-top:16px">${esc(c.headline)}</h1>
+          <p>${esc(c.landing.sub)}</p>
+          <div class="row" style="margin-top:26px">
+            <button class="btn btn-primary btn-lg" data-act="add" data-id="${p.id}">Add to cart · ${money(p.price)}</button>
+            <a class="btn btn-ghost btn-lg" href="#/product/${p.id}">More detail</a>
+          </div>
+          <div class="small" style="margin-top:16px;color:#9dc3ce">Free delivery over R600 · Cold chain, door to door</div>
+        </div>
+        <img src="${c.art}" alt="${esc(p.name)}">
+      </div>
+
+      <div class="g3" style="margin-top:32px">
+        ${c.landing.benefits.map(b=>`<div class="panel"><div style="color:var(--teal);font-size:20px;margin-bottom:8px">✓</div>
+          <b style="font-size:14.5px">${esc(b)}</b></div>`).join('')}
+      </div>
+
+      <div class="split" style="margin-top:32px">
+        <div class="panel">
+          <div class="row" style="gap:20px;align-items:flex-start">
+            <img src="${art('p'+p.id,{hue:p.hue,kind:p.kind,seed:p.hue*7+3,w:340,h:280})}" style="width:170px;border-radius:14px" alt="">
+            <div style="flex:1;min-width:180px">
+              <h3 style="font-size:21px">${esc(p.name)}</h3>
+              <p class="small muted" style="margin-top:6px">${esc(p.sub)}</p>
+              <div class="price" style="font-size:28px;margin-top:12px">${money(p.price)}</div>
+              <button class="btn btn-primary" style="margin-top:16px" data-act="add" data-id="${p.id}">Add to cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Questions</h3>
+          <div style="margin-top:14px;display:flex;flex-direction:column;gap:14px">
+            ${c.landing.faq.map(f=>`<div><b style="font-size:14px">${esc(f.q)}</b>
+              <p class="small muted" style="margin-top:3px">${esc(f.a)}</p></div>`).join('')}
+          </div>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:32px;text-align:center">
+        No pop-ups. No countdowns. No email walls. Just the product, the price and a button if you want it.
+      </div>
+    </div>
+  </section>`;
+}
+
+const ROUTES={home:viewHome,shop:viewShop,product:viewProduct,cart:viewCart,checkout:viewCheckout,
+  order:viewOrder,track:viewTrack,login:viewLogin,account:viewAccount,admin:viewAdmin,owner:viewOwner,
+  l:viewLanding};
+
+/* =====================================================================
+   EVENT HANDLING
+   ===================================================================== */
+document.addEventListener('click',e=>{
+  const el=e.target.closest('[data-act]');
+  if(!el) return;
+  const act=el.dataset.act;
+
+  if(act==='burger'){ $('#hdr').classList.toggle('open'); e.preventDefault(); return; }
+  if(act==='add'){ addToCart(el.dataset.id,1); e.preventDefault(); return; }
+  if(act==='add-qty'){
+    const q=parseInt($('#pdQty')?.textContent||'1',10);
+    addToCart(el.dataset.id,q); e.preventDefault(); return;
+  }
+  if(act==='pd-inc'){ const n=$('#pdQty'); n.textContent=Math.min(20,parseInt(n.textContent,10)+1); return; }
+  if(act==='pd-dec'){ const n=$('#pdQty'); n.textContent=Math.max(1,parseInt(n.textContent,10)-1); return; }
+  if(act==='q-inc'){ const l=state.cart.find(x=>x.id===el.dataset.id); setQty(el.dataset.id,l.qty+1); return; }
+  if(act==='q-dec'){ const l=state.cart.find(x=>x.id===el.dataset.id); setQty(el.dataset.id,l.qty-1); return; }
+  if(act==='remove'){ setQty(el.dataset.id,0); toast('Removed from cart'); return; }
+
+  if(act==='logout'){
+    localStorage.removeItem('oth_uid'); state.user=null;
+    logAct('system','User signed out'); save();
+    toast('Signed out'); location.hash='#/'; render(); e.preventDefault(); return;
+  }
+  if(act==='auth-tab'){
+    const tab=el.dataset.tab;
+    $$('.tab[data-act="auth-tab"]').forEach(t=>t.classList.toggle('on',t.dataset.tab===tab));
+    $('#loginForm').classList.toggle('hide',tab!=='login');
+    $('#regForm').classList.toggle('hide',tab!=='register');
+    return;
+  }
+
+  /* ---- marketing studio ---- */
+  if(act==='variant' && state.studio){
+    const s=state.studio;
+    const p=DB.products.find(x=>x.id===s.productId);
+    const nc=generateCreative({product:p,platform:s.platform,angle:s.angle,tone:s.tone,format:s.format},Math.random);
+    nc.slug=s.slug; nc.published=s.published;
+    state.studio=nc; toast('New variant generated'); render(); return;
+  }
+  if(act==='publish' && state.studio){
+    const s=state.studio;
+    const ex=DB.campaigns.find(x=>x.slug===s.slug);
+    if(ex){ ex.published=true; } else { DB.campaigns.unshift({...s,published:true}); }
+    s.published=true;
+    logAct(state.user.name,'Published landing page '+s.slug); save();
+    toast('Landing page published'); render(); return;
+  }
+  if(act==='copy-slug' && state.studio){
+    const url=location.origin+location.pathname+'#/l/'+state.studio.slug;
+    navigator.clipboard?.writeText(url).then(()=>toast('Landing page link copied'),()=>toast(url));
+    return;
+  }
+  if(act==='toggle-pub'){
+    const c=DB.campaigns.find(x=>x.id===el.dataset.id);
+    c.published=!c.published;
+    logAct(state.user.name,(c.published?'Published ':'Unpublished ')+c.slug); save(); render(); return;
+  }
+  if(act==='toggle-soon'){
+    const p=DB.products.find(x=>x.id===el.dataset.id);
+    p.soon=!p.soon; if(!p.soon && !p.stock) p.stock=20;
+    logAct(state.user.name,(p.soon?'Marked coming soon: ':'Launched: ')+p.name); save(); render(); return;
+  }
+  if(act==='new-product'){
+    const name=prompt('Product name'); if(!name) return;
+    const price=parseFloat(prompt('Price (R)','99.99')); if(isNaN(price)) return;
+    const unit=prompt('Unit','1kg')||'1kg';
+    const id=uid('p');
+    DB.products.push({id,name,sub:unit+' · new',cat:'fish',type:'frozen',price,unit,hue:190+Math.floor(Math.random()*80),
+      kind:'fish',stock:0,soon:true,desc:'Newly added to the range.'});
+    logAct(state.user.name,'Added product: '+name); save(); render(); toast('Product added — mark it live when ready'); return;
+  }
+});
+
+document.addEventListener('change',e=>{
+  const el=e.target.closest('[data-act]'); if(!el) return;
+  const act=el.dataset.act;
+  if(act==='sort'){ const r=parseRoute(); location.hash=`#/shop?f=${r.q.f||'all'}&sort=${el.value}`; return; }
+  if(act==='set-status'){
+    const o=DB.orders.find(x=>x.id===el.dataset.id); if(!o) return;
+    o.status=el.value;
+    if(!o.history.find(h=>h.status===el.value)) o.history.push({status:el.value,t:Date.now()});
+    logAct(state.user.name,`Order ${o.id} → ${el.value}`);
+    save(); toast(o.id+' updated'); render(); return;
+  }
+  if(act==='set-role'){
+    if(!state.user || state.user.role!=='owner') return;
+    const u=DB.users.find(x=>x.id===el.dataset.id); if(!u) return;
+    u.role=el.value; logAct(state.user.name,`Role change: ${u.email} → ${el.value}`);
+    save(); toast('Role updated'); render(); return;
+  }
+  if(act==='set-price'){
+    const p=DB.products.find(x=>x.id===el.dataset.id);
+    const v=parseFloat(el.value); if(isNaN(v)) return;
+    p.price=v; save(); toast(p.name+' price updated'); return;
+  }
+  if(act==='set-stock'){
+    const p=DB.products.find(x=>x.id===el.dataset.id);
+    const v=parseInt(el.value,10); if(isNaN(v)) return;
+    p.stock=v; save(); toast(p.name+' stock updated'); return;
+  }
+});
+
+document.addEventListener('submit',e=>{
+  const f=e.target; e.preventDefault();
+
+  if(f.id==='loginForm'){
+    const fd=new FormData(f);
+    const u=DB.users.find(x=>x.email.toLowerCase()===String(fd.get('email')).toLowerCase() && x.pw===hashPw(fd.get('pw')));
+    if(!u){ toast('Email or password is incorrect'); return; }
+    state.user=u; localStorage.setItem('oth_uid',u.id);
+    logAct(u.name,'Signed in'); save();
+    toast('Welcome back, '+u.name.split(' ')[0]);
+    location.hash = u.role==='owner'?'#/owner':(u.role==='admin'?'#/admin':'#/account');
+    render(); return;
+  }
+
+  if(f.id==='regForm'){
+    const fd=new FormData(f);
+    const email=String(fd.get('email')).toLowerCase();
+    if(DB.users.find(x=>x.email.toLowerCase()===email)){ toast('That email is already registered'); return; }
+    const u={id:uid('u'),name:fd.get('name'),email,pw:hashPw(fd.get('pw')),role:'client',created:Date.now()};
+    DB.users.push(u); state.user=u; localStorage.setItem('oth_uid',u.id);
+    logAct(u.name,'Created an account'); save();
+    toast('Account created'); location.hash='#/account'; render(); return;
+  }
+
+  if(f.id==='coForm'){
+    const fd=new FormData(f);
+    const lines=cartLines(); if(!lines.length) return;
+    const sub=cartSub(), del=cartDelivery();
+    const items=lines.map(l=>({id:l.id,name:l.name,price:l.price,qty:l.qty}));
+    const r=parseRoute();
+    const o={
+      id:'OTH-'+(100400+DB.orders.length*7+Math.floor(Math.random()*6)),
+      userId: state.user?state.user.id:'guest',
+      name:fd.get('name'), email:fd.get('email'), phone:fd.get('phone'),
+      address:fd.get('address'), city:fd.get('city'), postal:fd.get('postal'),
+      notes:fd.get('notes')||'', items, sub, delivery:del, total:sub+del,
+      payment:fd.get('payment'), status:STATUSES[0],
+      history:[{status:STATUSES[0],t:Date.now()}],
+      created:Date.now(), campaign: currentSession().campaign||'direct',
+    };
+    DB.orders.unshift(o);
+    currentSession().converted=true;
+    currentSession().orderIds=(currentSession().orderIds||[]).concat(o.id);
+    state.cart=[]; saveCart(); save();
+    track('purchase',{order:o.id,total:o.total});
+    logAct(o.name,'Placed order '+o.id+' ('+money(o.total)+')');
+    toast('Order placed — '+o.id);
+    location.hash='#/order/'+o.id; render(); return;
+  }
+
+  if(f.id==='trackForm'){
+    const fd=new FormData(f);
+    const num=String(fd.get('order')).trim().toUpperCase();
+    const email=String(fd.get('email')||'').trim().toLowerCase();
+    const o=DB.orders.find(x=>x.id.toUpperCase()===num && (!email || x.email.toLowerCase()===email));
+    const box=$('#trackResult');
+    if(!o){ box.innerHTML=`<div class="note warn">No order found with that number${email?' and email':''}. Check the number and try again.</div>`; return; }
+    const idx=STATUSES.indexOf(o.status);
+    box.innerHTML=`
+      <div class="note ok"><b>${esc(o.id)}</b> · ${esc(o.status)} · placed ${fmtDate(o.created)}</div>
+      <ul class="timeline" style="margin-top:18px">
+        ${STATUSES.map((s,i)=>{
+          const h=o.history.find(x=>x.status===s);
+          const cls=i<idx?'done':(i===idx?'done cur':'');
+          return `<li class="${cls}"><span class="dot"></span><b>${s}</b><small>${h?fmtDT(h.t):'Pending'}</small></li>`;
+        }).join('')}
+      </ul>
+      <a class="btn btn-primary btn-sm" style="margin-top:16px" href="#/order/${o.id}">Full order details</a>`;
+    track('track_lookup',{order:o.id});
+    return;
+  }
+
+  if(f.id==='studioForm'){
+    const fd=new FormData(f);
+    const p=DB.products.find(x=>x.id===fd.get('productId'));
+    const seedRaw=parseInt(fd.get('seed'),10);
+    const R = isNaN(seedRaw)? Math.random : rng(seedRaw*7919+3);
+    const c=generateCreative({product:p,platform:fd.get('platform'),angle:fd.get('angle'),
+      tone:fd.get('tone'),format:fd.get('format')},R);
+    c.published=false;
+    state.studio=c;
+    logAct(state.user.name,'Generated creative for '+p.name);
+    save(); toast('Creative generated'); render();
+    setTimeout(()=>{ const el=$('#studioForm'); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); },60);
+    return;
+  }
+});
+
+window.addEventListener('hashchange',()=>{
+  $('#hdr').classList.remove('open');
+  window.scrollTo({top:0,behavior:'instant' in window?'instant':'auto'});
+  render();
+});
+
+/* ------------------------------ BOOT ------------------------------ */
+load();
+restoreUser();
+if(!location.hash) location.hash='#/';
+currentSession();
+render();
+</script>
+</body>
+</html>
