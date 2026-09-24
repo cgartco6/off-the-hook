@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Off the Hook | Fresh Fish, Chicken & Free-Range Eggs | Cape Town Delivery</title>
+  <meta name="description" content="Fresh fish, quality chickens and free-range eggs delivered across Cape Town northern and southern suburbs. Table View, Blouberg, Parklands, Claremont, Rondebosch and more. Order on WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>🚚 Free delivery on orders over R450 in core zones</span>
+      <span class="top-bar-right">WhatsApp orders welcome • Same-day available</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="Off the Hook" class="logo-img">
+      </a>
+      <nav class="nav">
+        <a href="#why">Why Us</a>
+        <a href="#products">Products</a>
+        <a href="#areas">Delivery Areas</a>
+        <a href="#how">How It Works</a>
+        <a href="#order" class="btn btn-primary nav-cta">Order Now</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge">Cape Town • Fresh Daily</div>
+        <h1>Fresh Fish, Chickens<br>&amp; Free-Range Eggs</h1>
+        <p class="hero-sub">Premium quality protein delivered to your door across northern and southern Cape Town suburbs. Sourced fresh, properly chilled, and ready for your table.</p>
+        
+        <div class="hero-cta-group">
+          <a href="https://wa.me/27XXXXXXXXX?text=Hi%20Off%20the%20Hook%2C%20I%27d%20like%20to%20order%20fresh%20fish%20%2F%20chicken%20%2F%20eggs" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+            <span>💬</span> Order on WhatsApp
+          </a>
+          <a href="#products" class="btn btn-outline btn-lg">View Products</a>
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-item">
+            <strong>Daily Fresh</strong>
+            <span>Sourced every morning</span>
+          </div>
+          <div class="trust-item">
+            <strong>Cold Chain</strong>
+            <span>Properly chilled delivery</span>
+          </div>
+          <div class="trust-item">
+            <strong>Local Focus</strong>
+            <span>North &amp; South suburbs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-badge">Today’s Highlight</div>
+          <h3>Fresh Catch + Quality Protein</h3>
+          <p>Limited quantities. Order early for best selection.</p>
+          <ul class="hero-list">
+            <li>✓ Fresh fish (Hake, Kingklip, Snoek &amp; more)</li>
+            <li>✓ Whole &amp; portioned chickens</li>
+            <li>✓ Free-range eggs</li>
+            <li>✓ Delivered chilled to your door</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Strip -->
+  <section class="proof-strip">
+    <div class="container">
+      <p>Proudly delivering across <strong>Table View • Parklands • Blouberg • Melkbosstrand • Claremont • Rondebosch • Wynberg • Constantia</strong> and more</p>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section id="why" class="section why">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Cape Town Families Choose Off the Hook</h2>
+        <p>We are not a big-chain app. We are a focused local supplier who cares about quality and reliability.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🌊</div>
+          <h3>Truly Fresh</h3>
+          <p>Fish, chickens and eggs sourced for quality and turned around quickly. We hold inventory properly chilled so what arrives at your door is still at its best.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📍</div>
+          <h3>North &amp; South Coverage</h3>
+          <p>We deliver across northern suburbs (Table View to Brackenfell) and southern suburbs (Claremont, Rondebosch, Wynberg, Constantia and surrounds).</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">❄️</div>
+          <h3>Proper Cold Chain</h3>
+          <p>Insulated packaging and temperature control from our facility to your kitchen. Fresh protein deserves respect.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>Easy Ordering</h3>
+          <p>WhatsApp us or browse the products below. Clear cut-off times, transparent stock, and human communication when you need it.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💸</div>
+          <h3>Fair Local Pricing</h3>
+          <p>Competitive pricing without the big-platform mark-ups. Pay via card, Instant EFT or PayFast. Free delivery on larger orders in core zones.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔁</div>
+          <h3>Built for Repeat</h3>
+          <p>Weekly fish, chicken or egg routines that actually work. Many of our customers order every week because the quality stays consistent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS (dynamically rendered from database) -->
+  <section id="products" class="section products">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Fresh Products</h2>
+        <p>Stock changes with supply. WhatsApp us for today’s exact availability and current prices.</p>
+      </div>
+      
+      <div id="products-container">
+        <!-- Products are injected here by JavaScript from the database -->
+      </div>
+
+      <div class="stock-note">
+        <p><strong>Stock is limited and changes daily.</strong> Message us on WhatsApp for today’s exact availability and current prices before ordering larger quantities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delivery Areas -->
+  <section id="areas" class="section areas">
+    <div class="container">
+      <div class="section-header">
+        <h2>We Deliver Across Cape Town</h2>
+        <p>Focused coverage means better freshness and more reliable delivery times.</p>
+      </div>
+      <div class="areas-grid">
+        <div class="area-group">
+          <h4>Northern Suburbs – Core</h4>
+          <ul>
+            <li>Table View</li>
+            <li>Parklands</li>
+            <li>Sunningdale</li>
+            <li>West Beach</li>
+            <li>Bloubergstrand</li>
+            <li>Bloubergrant</li>
+            <li>Milnerton</li>
+          </ul>
+        </div>
+        <div class="area-group">
+          <h4>Northern Suburbs – Extended</h4>
+          <ul>
+            <li>Melkbosstrand</li>
+            <li>Duinefontein</li>
+            <li>Durbanville</li>
+            <li>Bellville</li>
+            <li>Brackenfell</li>
+            <li>Paarden Eiland</li>
+          </ul>
+        </div>
+        <div class="area-group">
+          <h4>Southern Suburbs</h4>
+          <ul>
+            <li>Claremont</li>
+            <li>Rondebosch</li>
+            <li>Newlands</li>
+            <li>Wynberg</li>
+            <li>Constantia</li>
+            <li>Kenilworth</li>
+            <li>Plumstead</li>
+          </ul>
+        </div>
+        <div class="area-group highlight">
+          <h4>Delivery Info</h4>
+          <ul>
+            <li>Scheduled windows</li>
+            <li>Same-day in core zones (when ordered early)</li>
+            <li>Free delivery over R450 in core</li>
+            <li>Collection available</li>
+          </ul>
+        </div>
+      </div>
+      <p class="areas-note">Not sure if we cover your street? WhatsApp your suburb or complex name and we’ll confirm.</p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how" class="section how">
+    <div class="container">
+      <div class="section-header">
+        <h2>How Ordering Works</h2>
+        <p>Simple, clear, and designed around fresh product.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Check Availability</h3>
+          <p>WhatsApp us or check the products above for today’s stock.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Place Your Order</h3>
+          <p>Tell us what you want, your suburb, and preferred delivery window. We’ll confirm price and availability.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Pay Securely</h3>
+          <p>Card, Instant EFT or PayFast. Easy and local payment options.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Receive Fresh</h3>
+          <p>We pack with care and deliver chilled to your door in the agreed window.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order CTA -->
+  <section id="order" class="section order-cta">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready for Fresh Fish, Chicken or Eggs?</h2>
+        <p>Message us now on WhatsApp with your order or questions. We respond quickly during business hours.</p>
+        
+        <a href="https://wa.me/27XXXXXXXXX?text=Hi%20Off%20the%20Hook%2C%20I%20would%20like%20to%20order.%20My%20suburb%20is%3A%20" class="btn btn-whatsapp btn-xl" target="_blank" rel="noopener">
+          💬 WhatsApp to Order
+        </a>
+
+        <div class="cta-details">
+          <p><strong>Business hours:</strong> Mon–Sat (cut-off times apply for same-day)</p>
+          <p><strong>Payments:</strong> PayFast • Instant EFT • Card</p>
+          <p><strong>Collection:</strong> Available by arrangement</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="logo footer-logo">
+            <img src="logo.png" alt="Off the Hook" class="logo-img logo-img-footer">
+          </a>
+          <p class="footer-tag">Fresh fish, quality chickens and free-range eggs delivered across Cape Town’s northern and southern suburbs.</p>
+        </div>
+        <div>
+          <h4>Delivery Focus</h4>
+          <p>Table View, Parklands, Blouberg, Melkbosstrand, Claremont, Rondebosch, Wynberg, Constantia, Durbanville, Bellville &amp; surrounds.</p>
+        </div>
+        <div>
+          <h4>Get in Touch</h4>
+          <p>WhatsApp is the fastest way to order or ask questions.</p>
+          <a href="https://wa.me/27XXXXXXXXX" class="footer-wa" target="_blank" rel="noopener">Chat on WhatsApp →</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Off the Hook. Local. Fresh. Reliable.</p>
+        <button id="admin-trigger" class="admin-trigger" title="Owner Dashboard">⚙️</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== OWNER DASHBOARD (POPUP) ==================== -->
+  <div id="admin-modal" class="admin-modal hidden">
+    <div class="admin-backdrop"></div>
+    <div class="admin-panel">
+      <div class="admin-header">
+        <h2>Owner Dashboard</h2>
+        <button id="admin-close" class="admin-close">✕</button>
+      </div>
+
+      <!-- Login -->
+      <div id="admin-login" class="admin-login">
+        <p>Enter owner password to manage products</p>
+        <input type="password" id="admin-password" placeholder="Password" autocomplete="off">
+        <button id="admin-login-btn" class="btn btn-primary">Unlock Dashboard</button>
+        <p class="admin-hint">Default password: <strong>offthehook2026</strong> (change it in script.js)</p>
+      </div>
+
+      <!-- Dashboard Content -->
+      <div id="admin-content" class="admin-content hidden">
+        <div class="admin-toolbar">
+          <button id="btn-add-product" class="btn btn-primary">+ Add Product</button>
+          <button id="btn-export" class="btn btn-outline-dark">Export JSON</button>
+          <button id="btn-import" class="btn btn-outline-dark">Import JSON</button>
+          <button id="btn-reset" class="btn btn-danger">Reset to Defaults</button>
+          <input type="file" id="import-file" accept=".json" class="hidden">
+        </div>
+
+        <div id="admin-product-list" class="admin-product-list">
+          <!-- Product editor cards injected here -->
+        </div>
+
+        <div class="admin-footer-note">
+          <p>All changes are saved automatically to this browser’s local database. Export JSON to backup or move to another device.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Edit Form Modal -->
+  <div id="product-form-modal" class="admin-modal hidden">
+    <div class="admin-backdrop"></div>
+    <div class="admin-panel admin-panel-sm">
+      <div class="admin-header">
+        <h2 id="form-title">Add Product</h2>
+        <button id="form-close" class="admin-close">✕</button>
+      </div>
+      <form id="product-form" class="product-form">
+        <input type="hidden" id="form-id">
+
+        <label>Category</label>
+        <select id="form-category" required>
+          <option value="fish">🐟 Fresh Fish</option>
+          <option value="chicken">🐔 Quality Chickens</option>
+          <option value="eggs">🥚 Free-Range Eggs</option>
+        </select>
+
+        <label>Product Name</label>
+        <input type="text" id="form-name" placeholder="e.g. Fresh Hake Portions" required>
+
+        <label>Price</label>
+        <input type="text" id="form-price" placeholder="e.g. From R89 / kg" required>
+
+        <label>Description</label>
+        <input type="text" id="form-description" placeholder="e.g. Firm, mild, perfect for pan or braai">
+
+        <label>Photo</label>
+        <div class="photo-upload">
+          <input type="file" id="form-photo" accept="image/*">
+          <div id="photo-preview" class="photo-preview"></div>
+          <button type="button" id="btn-clear-photo" class="btn-text">Clear photo</button>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="form-cancel" class="btn btn-outline-dark">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
